@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#121415">
+<title>GENÈVE — Timeless Elegance. Unmatched Prestige. | Rolex-Inspired Concept</title>
+<meta name="description" content="A tribute to horological mastery — a Rolex-inspired concept design featuring the Daytona, Day-Date, Submariner, GMT-Master II and Perpetual 1908.">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,500;0,600;1,400&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #0c0e0f; }
+  ::-webkit-scrollbar-thumb { background: #282a2b; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #e9c176; }
+  .gold-gradient-text {
+    background: linear-gradient(135deg, #e9c176 0%, #ffdea5 50%, #c6a15b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .rolex-green-glow { box-shadow: 0 0 50px -10px rgba(0, 96, 57, 0.45); }
+  .gold-glow { box-shadow: 0 0 40px -10px rgba(233, 193, 118, 0.35); }
+
+  /* ---------- Base / responsiveness ---------- */
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: 4.75rem; }
+  html:not(.js) { scroll-behavior: smooth; }
+  @media (min-width: 768px) { html { scroll-padding-top: 5.5rem; } }
+  body { overflow-x: clip; overflow-wrap: break-word; }
+  img { max-width: 100%; }
+  .no-scrollbar { scrollbar-width: none; -ms-overflow-style: none; }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  button, [role="button"], a { -webkit-tap-highlight-color: transparent; }
+  :focus-visible { outline: 2px solid #e9c176; outline-offset: 3px; }
+  input:focus-visible, select:focus-visible { outline: none; }
+
+  /* Material icons: fixed box so nothing jumps while the icon font loads */
+  .material-symbols-outlined {
+    display: inline-block; width: 1em; height: 1em; overflow: hidden;
+    white-space: nowrap; flex-shrink: 0; user-select: none;
+    transition: font-variation-settings .3s ease;
+  }
+  .material-symbols-outlined.icon-fill { font-variation-settings: 'FILL' 1; }
+  html.js:not(.icons-ready) .material-symbols-outlined { opacity: 0; }
+
+  /* ---------- Scroll reveal (smooth section transitions) ---------- */
+  .js [data-reveal] {
+    opacity: 0; translate: 0 28px;
+    transition: opacity .9s cubic-bezier(.22,1,.36,1) var(--rd, 0s), translate .9s cubic-bezier(.22,1,.36,1) var(--rd, 0s);
+  }
+  .js [data-reveal="left"]  { translate: -28px 0; }
+  .js [data-reveal="right"] { translate: 28px 0; }
+  .js [data-reveal="fade"]  { translate: 0 0; }
+  .js [data-reveal].is-visible { opacity: 1; translate: 0 0; }
+
+  /* ---------- Active nav states ---------- */
+  .nav-link { border-bottom: 1px solid transparent; }
+  .nav-link.is-active { color: #e9c176; border-bottom-color: rgba(233,193,118,.4); }
+  .tab-link.is-active { color: #e9c176; }
+  .tab-link.is-active .material-symbols-outlined { font-variation-settings: 'FILL' 1; }
+
+  /* ---------- Collapsible (menu / chronicle) ---------- */
+  .collapsible { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(.22,1,.36,1); }
+  .collapsible > .collapsible-inner { min-height: 0; overflow: hidden; visibility: hidden; transition: visibility 0s linear .5s; }
+  .collapsible.is-open { grid-template-rows: 1fr; }
+  .collapsible.is-open > .collapsible-inner { visibility: visible; transition-delay: 0s; }
+  @media (min-width: 768px) {
+    .collapsible.md-open { grid-template-rows: 1fr; }
+    .collapsible.md-open > .collapsible-inner { visibility: visible; }
+  }
+
+  /* ---------- Overlays (specs modal, toast, search) ---------- */
+  .overlay {
+    position: fixed; inset: 0; z-index: 70; display: flex; justify-content: center;
+    background: rgba(12,14,15,.9); -webkit-backdrop-filter: blur(24px); backdrop-filter: blur(24px);
+    visibility: hidden; opacity: 0; pointer-events: none;
+    transition: opacity .4s ease, visibility 0s linear .4s;
+  }
+  .overlay.is-open { visibility: visible; opacity: 1; pointer-events: auto; transition-delay: 0s; }
+  .sheet {
+    opacity: 0; translate: 0 40px; scale: .96;
+    transition: opacity .45s ease, translate .6s cubic-bezier(.22,1,.36,1), scale .6s cubic-bezier(.22,1,.36,1);
+  }
+  .overlay.is-open .sheet { opacity: 1; translate: 0 0; scale: 1; }
+  @media (max-width: 767px) {
+    .sheet-bottom { translate: 0 100%; scale: 1; opacity: 1; }
+  }
+  .overlay [data-in] { opacity: 0; translate: 0 14px; transition: opacity .35s ease, translate .35s ease; }
+  .overlay.is-open [data-in] {
+    opacity: 1; translate: 0 0;
+    transition: opacity .6s ease calc(var(--i, 0) * 70ms + .18s), translate .7s cubic-bezier(.22,1,.36,1) calc(var(--i, 0) * 70ms + .18s);
+  }
+  .img-fade { transition: opacity .5s ease, scale .7s cubic-bezier(.22,1,.36,1); }
+  .img-fade.is-swapping { opacity: 0; scale: .95; }
+  .text-in { animation: textIn .5s ease both; }
+  @keyframes textIn { from { opacity: 0; translate: 0 6px; } to { opacity: 1; translate: 0 0; } }
+
+  /* ---------- Snackbar ---------- */
+  .snack {
+    position: fixed; left: 50%; z-index: 80; bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+    translate: -50% 16px; opacity: 0; visibility: hidden; pointer-events: none;
+    transition: opacity .35s ease, translate .45s cubic-bezier(.22,1,.36,1), visibility 0s linear .45s;
+  }
+  .snack.is-show { opacity: 1; translate: -50% 0; visibility: visible; transition-delay: 0s; }
+  @media (min-width: 768px) { .snack { bottom: 2rem; } }
+
+  /* ---------- Configurator option buttons ---------- */
+  .opt { border: 1px solid rgba(233,193,118,.2); color: #bfc9bf; transition: all .3s ease; }
+  .opt:hover { border-color: #e9c176; }
+  .opt[aria-pressed="true"] { border-color: #e9c176; background: rgba(233,193,118,.1); color: #e9c176; }
+  #config-stage { transition: transform .6s cubic-bezier(.22,1,.36,1); transform: scale(var(--s, 1)); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js [data-reveal] { opacity: 1; translate: none; transition: none; }
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
+  }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-tertiary-fixed-variant": "#205035",
+          "surface-container": "#1e2021",
+          "surface-container-high": "#282a2b",
+          "outline": "#89938a",
+          "primary": "#88d7a6",
+          "secondary": "#e9c176",
+          "secondary-dark": "#c6a15b",
+          "on-secondary-container": "#dab36a",
+          "surface-container-low": "#1a1c1d",
+          "on-secondary": "#412d00",
+          "inverse-primary": "#176c43",
+          "error": "#ffb4ab",
+          "tertiary": "#9fd2af",
+          "outline-variant": "#3f4942",
+          "primary-fixed-dim": "#88d7a6",
+          "on-surface": "#e2e2e3",
+          "surface-container-highest": "#333536",
+          "surface": "#121415",
+          "tertiary-container": "#2d5c40",
+          "surface-dim": "#121415",
+          "inverse-surface": "#e2e2e3",
+          "error-container": "#93000a",
+          "secondary-fixed": "#ffdea5",
+          "surface-tint": "#88d7a6",
+          "surface-container-lowest": "#0c0e0f",
+          "tertiary-fixed": "#bbefca",
+          "on-error": "#690005",
+          "on-background": "#e2e2e3",
+          "secondary-fixed-dim": "#e9c176",
+          "on-surface-variant": "#bfc9bf",
+          "secondary-container": "#604403",
+          "on-primary-fixed": "#002110",
+          "background": "#121415",
+          "on-primary": "#003920",
+          "surface-variant": "#333536",
+          "primary-fixed": "#a3f4c1",
+          "primary-container": "#006039",
+          "on-tertiary": "#043820",
+          "on-error-container": "#ffdad6",
+          "on-primary-fixed-variant": "#005230",
+          "tertiary-fixed-dim": "#9fd2af",
+          "surface-bright": "#38393a",
+          "on-primary-container": "#88d8a7",
+          "inverse-on-surface": "#2f3132",
+          "on-tertiary-container": "#a0d2af",
+          "on-secondary-fixed-variant": "#5d4201",
+          "on-tertiary-fixed": "#002110",
+          "on-secondary-fixed": "#261900"
+        },
+        borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+        /* Same values as the original on desktop; they shrink smoothly on small screens */
+        spacing: {
+          "margin": "4rem",
+          "margin-mobile": "clamp(1rem, 4.5vw, 1.5rem)",
+          "space-md": "clamp(1rem, 3vw, 1.5rem)",
+          "space-sm": "0.75rem",
+          "space-xl": "clamp(2.5rem, 8vw, 6rem)",
+          "space-xs": "0.25rem",
+          "gutter-mobile": "1rem",
+          "gutter": "clamp(1rem, 3vw, 2rem)",
+          "space-lg": "clamp(1.75rem, 5vw, 3rem)"
+        },
+        fontFamily: {
+          "label-gold": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+          "headline-sm": ['"Noto Serif"', "Georgia", "serif"],
+          "body-lg": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+          "technical-mono": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+          "title-md": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+          "headline-md": ['"Noto Serif"', "Georgia", "serif"],
+          "body-md": ['"Plus Jakarta Sans"', "system-ui", "sans-serif"],
+          "headline-lg": ['"Noto Serif"', "Georgia", "serif"],
+          "headline-lg-mobile": ['"Noto Serif"', "Georgia", "serif"],
+          "display-hero-mobile": ['"Noto Serif"', "Georgia", "serif"],
+          "display-hero": ['"Noto Serif"', "Georgia", "serif"]
+        },
+        /* Fluid type: the max value of every token equals the original desktop size */
+        fontSize: {
+          "label-gold": ["clamp(10px, 0.55rem + 0.2vw, 11px)", { lineHeight: "1.5", letterSpacing: "0.2em", fontWeight: "600" }],
+          "headline-sm": ["clamp(18px, 14px + 1vw, 24px)", { lineHeight: "1.35", letterSpacing: "0em", fontWeight: "500" }],
+          "body-lg": ["clamp(15px, 14px + 0.4vw, 18px)", { lineHeight: "1.65", letterSpacing: "0.01em", fontWeight: "300" }],
+          "technical-mono": ["clamp(10px, 9px + 0.25vw, 12px)", { lineHeight: "1.5", letterSpacing: "0.08em", fontWeight: "400" }],
+          "title-md": ["clamp(14px, 12px + 0.5vw, 18px)", { lineHeight: "1.45", letterSpacing: "0.02em", fontWeight: "500" }],
+          "headline-md": ["clamp(22px, 17px + 1.3vw, 32px)", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "400" }],
+          "body-md": ["clamp(13px, 12px + 0.4vw, 15px)", { lineHeight: "1.65", letterSpacing: "0.01em", fontWeight: "300" }],
+          "headline-lg": ["clamp(24px, 3.5vw + 12px, 48px)", { lineHeight: "1.22", letterSpacing: "-0.015em", fontWeight: "400" }],
+          "headline-lg-mobile": ["32px", { lineHeight: "40px", letterSpacing: "-0.01em", fontWeight: "400" }],
+          "display-hero-mobile": ["40px", { lineHeight: "48px", letterSpacing: "-0.01em", fontWeight: "400" }],
+          "display-hero": ["clamp(48px, 7vw, 72px)", { lineHeight: "1.17", letterSpacing: "-0.02em", fontWeight: "400" }]
+        }
+      }
+    }
+  };
+</script>
+</head>
+<body class="bg-background text-on-surface font-body-md text-body-md min-h-screen selection:bg-secondary selection:text-on-secondary antialiased">
+
+<!-- =========================================================================
+     CONCEPT DISCLAIMER TOP STRIP
+     ========================================================================= -->
+<aside class="w-full bg-surface-container-lowest/90 border-b border-secondary/15 py-1.5 px-3 md:px-4 text-center z-50 relative" aria-label="Concept disclaimer">
+  <p class="font-technical-mono text-[10px] md:text-[11px] tracking-[0.2em] uppercase text-secondary/80 flex items-center justify-center gap-2 leading-snug">
+    <span class="w-1.5 h-1.5 shrink-0 rounded-full bg-secondary animate-pulse"></span>
+    <span>A tribute to horological mastery — Rolex-inspired concept design</span>
+    <span class="w-1.5 h-1.5 shrink-0 rounded-full bg-secondary animate-pulse"></span>
+  </p>
+</aside>
+
+<!-- =========================================================================
+     NAVIGATION BAR
+     ========================================================================= -->
+<header id="site-header" class="sticky top-0 left-0 w-full z-50 bg-gradient-to-b from-surface-container-lowest/95 via-primary-container/30 to-surface-container-lowest/90 backdrop-blur-2xl shadow-[0_1px_12px_rgba(0,0,0,0.6)] border-b border-secondary/10">
+  <div class="h-16 md:h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin grid grid-cols-[1fr_auto_1fr] items-center md:flex md:justify-between gap-gutter">
+
+    <!-- Phone: search -->
+    <div class="flex justify-start md:hidden">
+      <button type="button" aria-label="Search the archive" class="w-9 h-9 flex items-center justify-center text-secondary hover:text-on-surface transition-colors" data-action="search-open">
+        <span class="material-symbols-outlined text-[22px]">search</span>
+      </button>
+    </div>
+
+    <!-- Brand Crown / Logo -->
+    <a class="flex items-center gap-space-sm group" href="#home" aria-label="GENÈVE — back to top">
+      <span class="flex flex-col items-center justify-center">
+        <svg aria-hidden="true" class="w-6 h-6 md:w-8 md:h-8 text-secondary fill-current group-hover:scale-105 transition-transform" viewBox="0 0 24 24">
+          <path d="M5 19h14v1.5H5V19zm14-11l-3.5 5.5-3.5-7-3.5 7L5 8l1.5 9h11L19 8zm-7-2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm-6.5 2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm13 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"></path>
+        </svg>
+        <span class="font-headline-sm text-[11px] md:text-[12px] tracking-[0.3em] uppercase text-secondary font-semibold leading-none mt-1">GENÈVE</span>
+      </span>
+    </a>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden lg:flex items-center gap-space-lg" aria-label="Primary">
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="home atelier-stats" href="#home">Home</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="collection daytona-spotlight" href="#collection">Collection</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="metiers-dart" href="#metiers-dart">Métiers d'Art</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="craftsmanship" href="#craftsmanship">Craftsmanship</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="configurator" href="#configurator">Configurator</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="legacy" href="#legacy">Legacy</a>
+      <a class="nav-link font-label-gold text-label-gold uppercase transition-colors pb-1 text-on-surface-variant hover:text-secondary" data-spy="concierge" href="#concierge">Concierge</a>
+    </nav>
+
+    <!-- Right Action Cluster -->
+    <div class="flex items-center justify-end gap-space-md">
+      <a class="md:hidden px-2.5 py-1 rounded border border-secondary/40 text-secondary hover:bg-secondary hover:text-on-secondary transition-colors font-label-gold text-[9px] tracking-widest uppercase" href="#concierge">Salon</a>
+      <a class="hidden md:inline-flex items-center justify-center px-6 py-2.5 bg-surface-container-lowest/80 text-secondary hover:bg-secondary hover:text-on-secondary transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] border border-secondary/30 shadow-[0_0_15px_rgba(233,193,118,0.15)]" href="#concierge">Book Private Viewing</a>
+      <button type="button" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" class="hidden md:inline-flex lg:hidden p-2 text-secondary hover:text-on-surface transition-colors" data-action="toggle-menu">
+        <span class="material-symbols-outlined text-[24px]" id="menu-icon">menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Tablet Navigation Drawer -->
+  <div class="hidden md:block lg:hidden">
+    <div id="mobile-menu" class="collapsible">
+      <div class="collapsible-inner">
+        <nav aria-label="Mobile" class="bg-surface-container-lowest/95 border-t border-secondary/20 px-6 py-5 flex flex-col gap-4">
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="home atelier-stats" href="#home">Home</a>
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="collection daytona-spotlight" href="#collection">Collection</a>
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="metiers-dart" href="#metiers-dart">Métiers d'Art</a>
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="craftsmanship" href="#craftsmanship">Craftsmanship</a>
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="configurator" href="#configurator">Configurator</a>
+          <a class="nav-link font-label-gold text-on-surface-variant hover:text-secondary uppercase py-1 w-fit" data-spy="legacy" href="#legacy">Legacy</a>
+          <a class="font-label-gold text-secondary uppercase py-2 text-center border border-secondary/30" href="#concierge">Book Private Viewing</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="w-full bg-background relative overflow-hidden">
+  <!-- Ambient Light & Atmospheric Emerald Aura -->
+  <div class="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1000px] h-[750px] bg-gradient-to-b from-primary-container/40 via-tertiary-container/15 to-transparent blur-[140px] rounded-full"></div>
+    <div class="absolute top-[28%] -left-48 w-[650px] h-[650px] bg-primary-container/20 blur-[160px] rounded-full"></div>
+    <div class="absolute top-[55%] -right-48 w-[700px] h-[700px] bg-secondary-container/20 blur-[180px] rounded-full"></div>
+    <div class="absolute top-[75%] left-1/4 w-[600px] h-[600px] bg-primary-container/15 blur-[160px] rounded-full"></div>
+  </div>
+
+  <!-- =========================================================================
+       1. HERO
+       ========================================================================= -->
+  <section id="home" aria-labelledby="hero-title" class="relative md:min-h-[92vh] flex items-center justify-center px-margin-mobile lg:px-margin pt-8 pb-10 md:pt-12 md:pb-16 z-10">
+    <div class="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-x-gutter gap-y-space-md md:gap-y-gutter items-center justify-items-center md:justify-items-stretch text-center md:text-left">
+
+      <!-- Copy & actions (phone: flattened so the image can sit between copy and stats) -->
+      <div class="contents md:flex md:flex-col md:justify-center md:space-y-space-md lg:col-span-7 z-10">
+
+        <p class="order-1 md:order-none inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container/70 border border-secondary/25 backdrop-blur-md w-fit max-w-full">
+          <svg aria-hidden="true" class="w-4 h-4 shrink-0 text-secondary fill-current" viewBox="0 0 24 24">
+            <path d="M5 19h14v1.5H5V19zm14-11l-3.5 5.5-3.5-7-3.5 7L5 8l1.5 9h11L19 8zm-7-2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm-6.5 2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm13 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"></path>
+          </svg>
+          <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] md:tracking-[0.25em]">
+            <span class="md:hidden">Manufacture Horlogère • Concept</span>
+            <span class="hidden md:inline">Manufacture Horlogère Suisse • Rolex-Inspired Concept</span>
+          </span>
+        </p>
+
+        <h1 id="hero-title" class="order-2 md:order-none font-display-hero text-[clamp(1.5rem,7.6vw,3rem)] lg:text-display-hero text-on-surface tracking-tight leading-[1.1] md:leading-[1.05] max-w-2xl font-light">
+          TIMELESS ELEGANCE. <br>
+          <span class="italic font-normal gold-gradient-text">UNMATCHED PRESTIGE.</span>
+        </h1>
+
+        <p class="order-3 md:order-none font-body-lg text-body-lg text-on-surface-variant max-w-xl font-light leading-relaxed">
+          Discover the superlative pinnacle of Swiss horology. An architectural triumph of sunburst emerald lacquer, fluted 18 ct yellow gold, and perpetual precision engineered to outlive time itself.
+        </p>
+
+        <div class="order-6 md:order-none flex flex-col sm:flex-row items-stretch sm:items-center justify-center md:justify-start gap-3 sm:gap-4 pt-2 w-full max-w-[340px] sm:max-w-none">
+          <a class="group inline-flex items-center justify-center gap-3 px-5 md:px-8 py-3.5 md:py-4 bg-secondary text-on-secondary font-label-gold text-label-gold uppercase tracking-[0.2em] font-semibold transition-all duration-300 shadow-[0_0_28px_rgba(233,193,118,0.3)] hover:shadow-[0_0_40px_rgba(233,193,118,0.5)] hover:bg-secondary-fixed active:scale-[0.99]" href="#collection">
+            <span>EXPLORE COLLECTION</span>
+            <span class="material-symbols-outlined text-[18px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+          </a>
+          <a class="inline-flex items-center justify-center gap-2 px-5 md:px-8 py-3 md:py-4 bg-surface-container/60 hover:bg-surface-container-high border border-secondary/30 hover:border-secondary text-secondary transition-all font-label-gold text-label-gold uppercase tracking-[0.2em] active:scale-[0.99]" href="#metiers-dart"><span>MÉTIERS D'ART</span></a>
+        </div>
+
+        <dl class="order-5 md:order-none grid grid-cols-3 gap-2 md:gap-4 pt-4 md:pt-6 mt-2 md:mt-0 border-t border-outline-variant/30 w-full max-w-[350px] md:max-w-lg">
+          <div class="flex flex-col items-center md:items-start p-2 md:p-0 rounded-xl md:rounded-none bg-surface-container-low md:bg-transparent border border-secondary/10 md:border-0">
+            <dt class="font-technical-mono text-[9px] md:text-technical-mono text-outline uppercase tracking-wider order-2 mt-0.5 md:mt-0"><span class="md:hidden">Calibre</span><span class="hidden md:inline">Day-Date Calibre</span></dt>
+            <dd class="font-headline-sm text-[16px] md:text-headline-sm text-secondary font-light order-1">3255</dd>
+          </div>
+          <div class="flex flex-col items-center md:items-start p-2 md:p-0 rounded-xl md:rounded-none bg-surface-container-low md:bg-transparent border border-secondary/10 md:border-0">
+            <dt class="font-technical-mono text-[9px] md:text-technical-mono text-outline uppercase tracking-wider order-2 mt-0.5 md:mt-0"><span class="md:hidden">Reserve</span><span class="hidden md:inline">Power Reserve</span></dt>
+            <dd class="font-headline-sm text-[16px] md:text-headline-sm text-primary font-light order-1">70 H</dd>
+          </div>
+          <div class="flex flex-col items-center md:items-start p-2 md:p-0 rounded-xl md:rounded-none bg-surface-container-low md:bg-transparent border border-secondary/10 md:border-0">
+            <dt class="font-technical-mono text-[9px] md:text-technical-mono text-outline uppercase tracking-wider order-2 mt-0.5 md:mt-0"><span class="md:hidden">Precision</span><span class="hidden md:inline">Superlative Standard</span></dt>
+            <dd class="font-headline-sm text-[16px] md:text-headline-sm text-on-surface font-light order-1">±2 SEC</dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- Visual Stage -->
+      <div class="order-4 md:order-none lg:col-span-5 relative flex items-center justify-center py-0 md:py-6 lg:py-0 w-full">
+        <div class="absolute w-[400px] sm:w-[540px] h-[400px] sm:h-[540px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(233,193,118,0.3)_0%,_rgba(0,96,57,0.35)_45%,_transparent_75%)] blur-[90px] -z-10 animate-pulse pointer-events-none" style="animation-duration: 7s;" aria-hidden="true"></div>
+        <figure class="relative w-full max-w-[330px] md:max-w-[500px] aspect-square rounded-2xl p-2 bg-gradient-to-b from-surface-container-high/60 via-surface-container-lowest/80 to-surface-container-lowest border border-secondary/35 shadow-[0_25px_60px_rgba(0,0,0,0.95)] group overflow-hidden cursor-pointer" data-action="open-watch" data-watch="daytona" data-reveal="fade">
+          <img alt="Rolex Cosmograph Daytona in 18 ct yellow gold with emerald green dial" class="w-full h-full object-cover object-center rounded-xl transform transition-transform duration-700 ease-out group-hover:scale-105" src="images/daytona-champagne-tilt.webp" width="1200" height="1200" fetchpriority="high" decoding="async">
+          <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-5 md:left-5 md:right-5 p-3 md:p-4 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md border border-secondary/30 flex items-center justify-between gap-3 text-left">
+            <span class="flex flex-col min-w-0">
+              <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em]">Cosmograph Daytona</span>
+              <span class="font-title-md text-title-md text-on-surface font-medium truncate">Daytona • 18 ct Yellow Gold &amp; Emerald Dial</span>
+            </span>
+            <button type="button" class="w-9 h-9 md:w-10 md:h-10 shrink-0 rounded-full bg-primary-container/70 border border-secondary/30 flex items-center justify-center hover:bg-secondary hover:text-on-secondary text-secondary transition-colors" data-action="open-watch" data-watch="daytona" title="Inspect dossier" aria-label="Inspect Daytona dossier">
+              <span class="material-symbols-outlined text-[20px]">search</span>
+            </button>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <!-- Fine Scroll Indicator with Gold Line -->
+    <a class="hidden md:flex absolute bottom-4 left-1/2 -translate-x-1/2 flex-col items-center gap-2 group opacity-80 hover:opacity-100 transition-opacity" href="#atelier-stats">
+      <span class="font-technical-mono text-technical-mono text-secondary uppercase tracking-[0.25em]">Scroll to Discover</span>
+      <span class="w-[1px] h-9 bg-surface-container-highest relative overflow-hidden block">
+        <span class="block w-full h-1/2 bg-gradient-to-b from-transparent via-secondary to-transparent animate-bounce"></span>
+      </span>
+    </a>
+  </section>
+
+  <!-- =========================================================================
+       2. REFINED ATELIER STATS BAR
+       ========================================================================= -->
+  <section id="atelier-stats" aria-label="Atelier at a glance" class="w-full bg-surface-container-low border-y border-secondary/15 py-4 md:py-space-md px-margin-mobile md:px-0 relative z-10">
+    <div class="max-w-7xl mx-auto md:px-margin-mobile lg:px-margin" data-reveal>
+      <ul class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-gutter text-left md:divide-x md:divide-secondary/10">
+        <li class="p-2.5 md:px-2 md:py-3 rounded md:rounded-none bg-surface-container-lowest/60 md:bg-transparent border border-secondary/10 md:border-0 flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 md:gap-2 text-secondary pb-0.5 md:pb-1">
+            <span class="material-symbols-outlined text-[15px] md:text-[18px]">location_on</span>
+            <span class="font-technical-mono text-[9px] md:text-technical-mono tracking-[0.15em] md:tracking-[0.2em] uppercase">Origin</span>
+          </div>
+          <div class="font-title-md text-[13px] md:text-title-md text-on-surface font-normal">Geneva, Switzerland</div>
+          <div class="font-technical-mono text-[10px] md:text-technical-mono text-outline pt-0.5">Manufacture Est. 1905</div>
+        </li>
+        <li class="p-2.5 md:px-2 md:py-3 md:pl-8 rounded md:rounded-none bg-surface-container-lowest/60 md:bg-transparent border border-secondary/10 md:border-0 flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 md:gap-2 text-secondary pb-0.5 md:pb-1">
+            <span class="material-symbols-outlined text-[15px] md:text-[18px]">schedule</span>
+            <span class="font-technical-mono text-[9px] md:text-technical-mono tracking-[0.15em] md:tracking-[0.2em] uppercase">Chronometry</span>
+          </div>
+          <div class="font-title-md text-[13px] md:text-title-md text-on-surface font-normal">±2 Sec / Day Precision</div>
+          <div class="font-technical-mono text-[10px] md:text-technical-mono text-outline pt-0.5">Superlative COSC Certified</div>
+        </li>
+        <li class="p-2.5 md:px-2 md:py-3 md:pl-8 rounded md:rounded-none bg-surface-container-lowest/60 md:bg-transparent border border-secondary/10 md:border-0 flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 md:gap-2 text-secondary pb-0.5 md:pb-1">
+            <span class="material-symbols-outlined text-[15px] md:text-[18px]">water_drop</span>
+            <span class="font-technical-mono text-[9px] md:text-technical-mono tracking-[0.15em] md:tracking-[0.2em] uppercase">Hermetic Seal</span>
+          </div>
+          <div class="font-title-md text-[13px] md:text-title-md text-on-surface font-normal">Oyster Architecture</div>
+          <div class="font-technical-mono text-[10px] md:text-technical-mono text-outline pt-0.5">100m to 300m Waterproof</div>
+        </li>
+        <li class="p-2.5 md:px-2 md:py-3 md:pl-8 rounded md:rounded-none bg-surface-container-lowest/60 md:bg-transparent border border-secondary/10 md:border-0 flex flex-col justify-center">
+          <div class="flex items-center gap-1.5 md:gap-2 text-secondary pb-0.5 md:pb-1">
+            <span class="material-symbols-outlined text-[15px] md:text-[18px]">diamond</span>
+            <span class="font-technical-mono text-[9px] md:text-technical-mono tracking-[0.15em] md:tracking-[0.2em] uppercase">Metallurgy</span>
+          </div>
+          <div class="font-title-md text-[13px] md:text-title-md text-on-surface font-normal">Oystersteel &amp; 18K Gold</div>
+          <div class="font-technical-mono text-[10px] md:text-technical-mono text-outline pt-0.5">In-House Dedicated Foundry</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. FEATURED WATCH COLLECTION
+       ========================================================================= -->
+  <section id="collection" aria-labelledby="collection-title" class="w-full py-space-xl px-margin-mobile lg:px-margin relative z-10">
+    <div class="max-w-7xl mx-auto flex flex-col gap-space-lg">
+      <header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-secondary/15 pb-space-md" data-reveal>
+        <div class="space-y-space-xs max-w-xl">
+          <p class="inline-flex items-center gap-2 text-secondary">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-gold text-label-gold uppercase tracking-[0.25em]">The Master References</span>
+          </p>
+          <h2 id="collection-title" class="font-headline-lg text-headline-lg text-on-surface font-light">THE CURATED COLLECTION</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant font-light">
+            Iconic silhouettes sculpted from noble golds and Oystersteel, powered by self-winding mechanical calibres certified with superlative precision.
+          </p>
+        </div>
+        <p class="flex items-center gap-2">
+          <span class="font-technical-mono text-technical-mono text-outline uppercase">Displaying:</span>
+          <span class="font-technical-mono text-technical-mono text-secondary font-medium">6 Master References</span>
+        </p>
+      </header>
+
+      <!-- Phone: swipeable carousel • Tablet/Desktop: grid -->
+      <ul id="cards-track" class="flex gap-3.5 overflow-x-auto snap-x snap-mandatory pb-4 pt-1 -mx-margin-mobile px-margin-mobile scroll-px-margin-mobile no-scrollbar md:mx-0 md:px-0 md:pb-0 md:pt-0 md:overflow-visible md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-gutter list-none p-0 m-0" aria-label="Master references">
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.0s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(233,193,118,0.35)]" data-watch="daydate">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,96,57,0.35)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex Day-Date 40 in 18ct yellow gold with olive green dial" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/day-date-40-studio.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 228238</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark Day-Date 40 Yellow Gold" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">The Sovereign Choice</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">Day-Date 40 Yellow Gold</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">The ultimate watch of prestige. Radiating an intense emerald green sunburst dial set inside an 18 ct yellow gold fluted bezel and iconic President bracelet.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="daydate">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.06s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(0,96,57,0.35)]" data-watch="submariner">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,96,57,0.35)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex Submariner Date Kermit Hulk edition in Oystersteel with emerald Cerachrom bezel" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/submariner-hulk-hand.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 126610LV</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark Submariner Date 'Kermit/Hulk'" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">The Divers' Benchmark</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">Submariner Date 'Kermit/Hulk'</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">Forged from impervious Oystersteel with an intense emerald green Cerachrom unidirectional rotatable bezel, Triplock winding crown, and 300m waterproof hermetic case.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="submariner">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.12s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(233,193,118,0.35)]" data-watch="gmtmaster">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(233,193,118,0.25)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex GMT-Master II in 18k yellow gold with green dial and Cerachrom bezel" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/gmt-master-ii.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 126718GRNR</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark GMT-Master II Yellow Gold" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">The Cosmopolitan Traveler</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">GMT-Master II Yellow Gold</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">Cast in solid 18 ct yellow gold featuring a bi-colour 24-hour rotatable Cerachrom bezel, luminous emerald sunburst dial, and an integrated solid link Oyster bracelet.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="gmtmaster">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.18s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(0,96,57,0.35)]" data-watch="daydate36">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,96,57,0.35)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex Day-Date 36 in 18ct yellow gold with Roman emerald green lacquer dial" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/day-date-36-roman.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 128238</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark Day-Date 36 Roman Emerald" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">The Roman Aristocracy</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">Day-Date 36 Roman Emerald</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">A bespoke expression of classical majesty. Sculpted in 18 ct yellow gold featuring faceted Roman numeral indices, deep green lacquer dial, and the signature President bracelet.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="daydate36">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.24s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(233,193,118,0.25)]" data-watch="1908">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(233,193,118,0.25)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex Perpetual 1908 in 18k yellow gold with intense white dial and fluted bezel" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/perpetual-1908.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 52508-0002</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark Perpetual 1908 Masterpiece" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">Grand Horology Dress</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">Perpetual 1908 Masterpiece</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">An immaculate classical dress piece. Featuring a slim 39 mm 18 ct yellow gold case with dual bezel (part fluted, part domed), pristine white lacquer dial, and transparent sapphire back.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="1908">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="shrink-0 w-[min(285px,82vw)] snap-center md:w-auto md:shrink" data-reveal style="--rd:0.3s">
+          <article class="group relative h-full rounded-xl bg-surface-container-low border border-secondary/20 hover:border-secondary/50 transition-all duration-500 flex flex-col overflow-hidden cursor-pointer hover:shadow-[0_10px_35px_rgba(233,193,118,0.35)]" data-watch="daytona">
+            <figure class="relative w-full aspect-[4/3] bg-gradient-to-b from-surface-container-high/50 to-surface-container-lowest overflow-hidden p-2 md:p-4 flex items-center justify-center">
+              <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,96,57,0.35)_0%,_transparent_70%)]"></div>
+              <img alt="Rolex Cosmograph Daytona front studio reference in 18 ct yellow gold with radiant champagne counters" class="w-full h-full object-contain relative z-10 transform transition-transform duration-700 group-hover:scale-105" src="images/daytona-studio.webp" width="1000" height="1000" loading="lazy" decoding="async">
+              <figcaption class="absolute top-2 left-2 md:top-4 md:left-4 z-20 px-2 py-0.5 md:px-2.5 md:py-1 bg-surface-container-lowest/85 backdrop-blur-sm border border-secondary/25 font-technical-mono text-[9px] md:text-[10px] text-secondary tracking-widest uppercase">REF. 116508-0013</figcaption>
+              <button type="button" class="absolute top-2 right-2 md:top-3 md:right-3 z-20 p-2 text-secondary/70 hover:text-secondary transition-colors" title="Bookmark reference" aria-label="Bookmark Cosmograph Daytona 18 ct Gold" aria-pressed="false" data-action="bookmark">
+                <span class="material-symbols-outlined text-[20px]">bookmark</span>
+              </button>
+            </figure>
+            <div class="p-4 md:p-space-md flex flex-col flex-grow justify-between gap-4 md:gap-space-md bg-surface-container-low/95">
+              <div>
+                <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.18em] md:tracking-[0.2em]">The Ultimate Racing Chronograph</p>
+                <h3 class="font-headline-sm text-headline-sm text-on-surface font-light mt-1">Cosmograph Daytona 18 ct Gold</h3>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light mt-2 line-clamp-3">A benchmark of horological power. Cast in solid 18 ct yellow gold featuring an emerald green sunburst dial, engraved tachymetric scale bezel, and high-beat chronograph calibre.</p>
+              </div>
+              <div class="space-y-3 md:space-y-4 pt-3 md:pt-4 border-t border-outline-variant/20">
+                <p class="flex items-center justify-between gap-2">
+                  <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Acquisition</span>
+                  <span class="font-label-gold text-label-gold text-secondary tracking-[0.1em] md:tracking-[0.15em] uppercase text-right">Price Upon Request</span>
+                </p>
+                <button type="button" class="w-full py-2.5 md:py-3 bg-surface-container-highest/60 hover:bg-secondary text-secondary hover:text-on-secondary border border-secondary/30 transition-all font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.18em] flex items-center justify-center gap-2" data-action="open-watch" data-watch="daytona">
+                  <span>EXPLORE SPECIFICATIONS</span>
+                  <span class="material-symbols-outlined text-[16px]">visibility</span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </li>
+      </ul>
+      <p class="md:hidden text-center font-technical-mono text-[10px] text-outline uppercase tracking-[0.2em] -mt-3" aria-hidden="true">Swipe to browse • 6 references</p>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       DEDICATED SPOTLIGHT: COSMOGRAPH DAYTONA
+       ========================================================================= -->
+  <section id="daytona-spotlight" aria-labelledby="daytona-title" class="w-full py-space-xl px-margin-mobile lg:px-margin bg-gradient-to-b from-surface to-surface-container-lowest border-y border-secondary/20 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-space-xl gap-y-space-md md:gap-y-space-lg items-center justify-items-center md:justify-items-stretch text-center md:text-left">
+
+        <!-- Image -->
+        <div class="order-4 md:order-none lg:col-span-6 relative flex items-center justify-center w-full" data-reveal="fade">
+          <div class="absolute w-[400px] sm:w-[520px] h-[400px] sm:h-[520px] rounded-full bg-[radial-gradient(circle_at_center,_rgba(233,193,118,0.25)_0%,_rgba(0,96,57,0.35)_45%,_transparent_75%)] blur-[90px] -z-10 animate-pulse pointer-events-none" aria-hidden="true"></div>
+          <figure class="relative w-full max-w-[340px] md:max-w-[500px] aspect-square rounded-2xl p-2 bg-gradient-to-b from-surface-container-high/60 via-surface-container-lowest/80 to-surface-container-lowest border border-secondary/35 shadow-[0_25px_60px_rgba(0,0,0,0.95)] group overflow-hidden cursor-pointer" data-action="open-watch" data-watch="daytona">
+            <img alt="Rolex Cosmograph Daytona in 18 ct yellow gold with emerald green dial" class="w-full h-full object-cover object-center rounded-xl transform transition-transform duration-700 ease-out group-hover:scale-105" src="images/daytona-green-tilt.webp" width="1200" height="1200" loading="lazy" decoding="async">
+            <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-5 md:left-5 md:right-5 p-3 md:p-4 rounded-lg bg-surface-container-lowest/90 backdrop-blur-md border border-secondary/30 flex items-center justify-between gap-3 text-left">
+              <span class="flex flex-col min-w-0">
+                <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em]">REF. 116508</span>
+                <span class="font-title-md text-title-md text-on-surface font-medium"><span class="md:hidden">Cosmograph Daytona</span><span class="hidden md:inline">Oyster Perpetual Cosmograph Daytona</span></span>
+              </span>
+              <button type="button" class="w-9 h-9 md:w-10 md:h-10 shrink-0 rounded-full bg-primary-container/70 border border-secondary/30 flex items-center justify-center hover:bg-secondary hover:text-on-secondary text-secondary transition-colors" data-action="open-watch" data-watch="daytona" title="Inspect technical dossier" aria-label="Inspect technical dossier">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+              </button>
+            </figcaption>
+          </figure>
+        </div>
+
+        <!-- Copy -->
+        <div class="contents md:flex md:flex-col md:space-y-space-md lg:col-span-6">
+          <p class="order-1 md:order-none inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container/70 border border-secondary/25 backdrop-blur-md w-fit max-w-full" data-reveal>
+            <span class="w-2 h-2 shrink-0 rounded-full bg-secondary animate-pulse"></span>
+            <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] md:tracking-[0.25em]">
+              <span class="md:hidden">Icon of Noble Racing • Ref. 116508</span>
+              <span class="hidden md:inline">Horological Icon • Chronograph Legend</span>
+            </span>
+          </p>
+          <h2 id="daytona-title" class="order-2 md:order-none font-headline-lg text-headline-lg text-on-surface font-light leading-tight" data-reveal>
+            COSMOGRAPH DAYTONA — <br>
+            <span class="italic gold-gradient-text">AN ICON OF SPEED &amp; NOBLE GOLD.</span>
+          </h2>
+          <p class="order-3 md:hidden font-body-md text-body-md text-on-surface-variant font-light max-w-[340px]">
+            Born on the asphalt of Daytona Beach to meet the demands of endurance drivers. Cast entirely in in-house 18 ct yellow gold with an intense emerald green sunburst lacquer dial.
+          </p>
+
+          <!-- Quote + story: always open on tablet/desktop, expandable on phone -->
+          <div id="daytona-chronicle" class="order-6 md:order-none collapsible md-open w-full text-left" data-reveal>
+            <div class="collapsible-inner">
+              <div class="space-y-space-md pt-2 md:pt-0">
+                <blockquote class="font-headline-sm text-headline-sm text-secondary/95 font-light border-l-2 border-secondary pl-4 my-2 leading-relaxed">
+                  "Born on the high-speed banks of Daytona Beach, perfected in solid 18 ct yellow gold and an unforgettable emerald sunburst dial."
+                </blockquote>
+                <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+                  Introduced to meet the demands of endurance racing drivers, the Cosmograph Daytona is an enduring legend in sports chronometry. Forged in solid 18 ct yellow gold cast in Rolex's in-house foundry, this reference pairs a signature tachymetric scale bezel with the venerated column-wheel Calibre 4130 self-winding chronograph calibre, engineered with fewer components to ensure uncompromising chronometric reliability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop / tablet: 3 spec cards -->
+          <div class="hidden md:grid order-5 md:order-none grid-cols-3 gap-4 pt-4 border-t border-outline-variant/30" data-reveal>
+            <div class="p-4 rounded-lg bg-surface-container/60 border border-secondary/15">
+              <span class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Calibre</span>
+              <span class="font-title-md text-title-md text-on-surface">4130 / 4131</span>
+              <p class="font-technical-mono text-[11px] text-outline mt-1">Parachrom hairspring</p>
+            </div>
+            <div class="p-4 rounded-lg bg-surface-container/60 border border-secondary/15">
+              <span class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Tachymeter</span>
+              <span class="font-title-md text-title-md text-on-surface">400 Units/H</span>
+              <p class="font-technical-mono text-[11px] text-outline mt-1">18 ct Gold engraved</p>
+            </div>
+            <div class="p-4 rounded-lg bg-surface-container/60 border border-secondary/15">
+              <span class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Power Reserve</span>
+              <span class="font-title-md text-title-md text-on-surface">72 Hours</span>
+              <p class="font-technical-mono text-[11px] text-outline mt-1">Superlative chronometer</p>
+            </div>
+          </div>
+
+          <!-- Phone: 2x2 highlights -->
+          <ul class="md:hidden order-5 grid grid-cols-2 gap-2.5 w-full max-w-[340px] text-left list-none p-0 m-0">
+            <li class="p-3 rounded-xl bg-surface-container-low border border-secondary/15">
+              <div class="flex items-center gap-1.5 text-secondary mb-1"><span class="material-symbols-outlined text-[16px]">settings</span><span class="font-label-gold text-[9px] uppercase tracking-wider">Calibre 4131</span></div>
+              <h3 class="font-headline-sm text-[13px] text-on-surface font-light">Column Wheel</h3>
+              <p class="font-technical-mono text-[10px] text-outline mt-0.5 leading-snug tracking-normal">Smooth chronograph start without clutch jumping.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-surface-container-low border border-secondary/15">
+              <div class="flex items-center gap-1.5 text-secondary mb-1"><span class="material-symbols-outlined text-[16px]">shutter_speed</span><span class="font-label-gold text-[9px] uppercase tracking-wider">Chronometry</span></div>
+              <h3 class="font-headline-sm text-[13px] text-on-surface font-light">72-Hour Autonomy</h3>
+              <p class="font-technical-mono text-[10px] text-outline mt-0.5 leading-snug tracking-normal">Paramagnetic blue Parachrom hairspring.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-surface-container-low border border-secondary/15">
+              <div class="flex items-center gap-1.5 text-secondary mb-1"><span class="material-symbols-outlined text-[16px]">speed</span><span class="font-label-gold text-[9px] uppercase tracking-wider">Tachymeter</span></div>
+              <h3 class="font-headline-sm text-[13px] text-on-surface font-light">400 Units/H</h3>
+              <p class="font-technical-mono text-[10px] text-outline mt-0.5 leading-snug tracking-normal">18 ct gold engraved scale.</p>
+            </li>
+            <li class="p-3 rounded-xl bg-surface-container-low border border-secondary/15">
+              <div class="flex items-center gap-1.5 text-secondary mb-1"><span class="material-symbols-outlined text-[16px]">water_drop</span><span class="font-label-gold text-[9px] uppercase tracking-wider">Triplock Seal</span></div>
+              <h3 class="font-headline-sm text-[13px] text-on-surface font-light">100 Metres</h3>
+              <p class="font-technical-mono text-[10px] text-outline mt-0.5 leading-snug tracking-normal">Screw-down chronograph pushers.</p>
+            </li>
+          </ul>
+
+          <!-- Actions -->
+          <div class="order-7 md:order-none flex w-full max-w-[340px] md:max-w-none gap-2 md:gap-4 md:pt-2 flex-row md:flex-row items-stretch" data-reveal>
+            <button type="button" class="flex-1 md:flex-none px-3 md:px-8 py-3 md:py-3.5 bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-gold text-label-gold uppercase tracking-[0.15em] md:tracking-[0.2em] font-semibold transition-all shadow-[0_0_25px_rgba(233,193,118,0.3)] active:scale-[0.99]" data-action="open-watch" data-watch="daytona">
+              <span class="md:hidden">Technical Specs</span><span class="hidden md:inline">View Technical Dossier</span>
+            </button>
+            <button type="button" id="chronicle-btn" aria-expanded="false" aria-controls="daytona-chronicle" class="md:hidden flex-1 px-3 py-3 bg-surface-container/60 hover:bg-surface-container-high border border-secondary/30 text-secondary font-label-gold text-label-gold uppercase tracking-[0.15em] transition-all inline-flex items-center justify-center gap-1.5" data-action="toggle-chronicle">
+              <span>Racing Story</span><span class="material-symbols-outlined text-[16px]" id="chronicle-icon">expand_more</span>
+            </button>
+            <a class="hidden md:inline-flex items-center px-8 py-3.5 bg-surface-container/60 hover:bg-surface-container-high border border-secondary/30 hover:border-secondary text-secondary font-label-gold text-label-gold uppercase tracking-[0.2em] transition-all" href="#concierge" data-inquire="daytona">Request Allocation</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. METIERS D'ART & BESPOKE ATELIER
+       ========================================================================= -->
+  <section id="metiers-dart" aria-labelledby="metiers-title" class="w-full py-space-xl px-margin-mobile lg:px-margin bg-surface-container-lowest border-y border-secondary/15 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-space-xl gap-y-space-md md:gap-y-space-lg items-center justify-items-center md:justify-items-stretch text-center md:text-left">
+
+        <!-- Visual -->
+        <figure class="order-4 md:order-none lg:col-span-6 relative w-full rounded-2xl overflow-hidden border border-secondary/30 shadow-[0_20px_50px_rgba(0,0,0,0.85)] group" data-reveal>
+          <div class="aspect-[4/5] md:aspect-[16/10] lg:aspect-[528/540]">
+            <img alt="Avant-garde Haute Horlogerie timepiece with engraved leaf bezel and emerald alligator strap on tobacco leaf" class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105" src="images/hublot-leaf-bezel.webp" width="960" height="1200" loading="lazy" decoding="async">
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent pointer-events-none"></div>
+          <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6 p-3 md:p-5 rounded-xl bg-surface-container-lowest/90 backdrop-blur-md border border-secondary/25 flex items-center justify-between gap-3 text-left">
+            <span class="min-w-0">
+              <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] block">Cabinet de Pièces Uniques</span>
+              <span class="font-title-md text-title-md text-on-surface font-medium mt-0.5 block">Atelier Gravure &amp; Émail</span>
+              <span class="hidden sm:block font-technical-mono text-[11px] text-outline mt-0.5">Hand-Chiseled Botanical Bezel • Royal Green Alligator</span>
+            </span>
+            <span class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-secondary/10 border border-secondary/30 flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-secondary text-[20px] md:text-[22px]">auto_awesome</span>
+            </span>
+          </figcaption>
+        </figure>
+
+        <!-- Copy -->
+        <div class="contents md:flex md:flex-col md:space-y-space-md lg:col-span-6">
+          <p class="order-1 md:order-none inline-flex items-center justify-center md:justify-start gap-2 text-secondary" data-reveal>
+            <span class="material-symbols-outlined text-[18px]">brush</span>
+            <span class="font-label-gold text-label-gold uppercase tracking-[0.2em] md:tracking-[0.25em]">Exclusive Creations • Métiers d'Art</span>
+          </p>
+          <h2 id="metiers-title" class="order-2 md:order-none font-headline-lg text-headline-lg text-on-surface font-light leading-tight" data-reveal>
+            WHERE WATCHMAKING <br>
+            <span class="italic gold-gradient-text">BECOMES PURE ART.</span>
+          </h2>
+          <blockquote class="order-5 md:order-none font-headline-sm text-headline-sm text-secondary/95 font-light md:border-l-2 md:border-secondary md:pl-4 my-2 leading-relaxed text-center md:text-left" data-reveal>
+            "Every stroke of the master engraver's burin is a permanent testament to patience, transforming noble gold into a living canvas."
+          </blockquote>
+          <p class="order-3 hidden md:block md:order-none font-body-md text-body-md text-on-surface-variant font-light leading-relaxed" data-reveal>
+            Beyond serial perfection lies the bespoke sanctuary of our Métiers d'Art studio. Here, master craftsmen dedicate up to 140 uninterrupted hours hand-sculpting each bezel motif, blending botanical acanthus leaf engravings with deep emerald lacquers and hand-stitched Mississippiensis leather straps.
+          </p>
+          <ul class="order-6 md:order-none grid grid-cols-2 gap-2.5 md:gap-4 pt-3 md:pt-4 border-t border-outline-variant/30 w-full list-none m-0 p-0 text-left" data-reveal>
+            <li class="p-3 md:p-4 rounded-lg bg-surface-container/60 border border-secondary/15">
+              <span class="font-technical-mono text-[10px] md:text-[11px] text-secondary uppercase tracking-wider block mb-1">Hand Guillochage</span>
+              <span class="font-title-md text-title-md text-on-surface">140+ Hours</span>
+              <p class="font-technical-mono text-[10px] md:text-[11px] text-outline mt-1">Manual rose-engine<span class="hidden md:inline"> engraving</span></p>
+            </li>
+            <li class="p-3 md:p-4 rounded-lg bg-surface-container/60 border border-secondary/15">
+              <span class="font-technical-mono text-[10px] md:text-[11px] text-secondary uppercase tracking-wider block mb-1">Limited Roster</span>
+              <span class="font-title-md text-title-md text-on-surface">Bespoke Only</span>
+              <p class="font-technical-mono text-[10px] md:text-[11px] text-outline mt-1">Private <span class="hidden md:inline">client </span>allocation</p>
+            </li>
+          </ul>
+          <div class="order-7 md:order-none pt-2" data-reveal>
+            <a class="inline-flex items-center gap-3 font-label-gold text-label-gold text-secondary uppercase tracking-[0.15em] md:tracking-[0.2em] hover:text-secondary-fixed transition-colors group" href="#concierge" data-inquire="metiers">
+              <span>Inquire About Bespoke Commissions</span>
+              <span class="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. MACRO PRECISION & DIAL ARTISANSHIP
+       ========================================================================= -->
+  <section id="craftsmanship" aria-labelledby="craft-title" class="w-full py-space-xl px-margin-mobile lg:px-margin bg-surface-container-low/60 relative z-10">
+    <div class="max-w-7xl mx-auto space-y-space-lg">
+      <header class="text-center max-w-3xl mx-auto space-y-space-xs" data-reveal>
+        <p class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.25em]">Micro-Mechanical Finissage</p>
+        <h2 id="craft-title" class="font-headline-lg text-headline-lg text-on-surface font-light">PERPETUAL CHRONOMETER INTEGRITY</h2>
+        <p class="font-body-md text-body-md text-on-surface-variant font-light">
+          A microscopic examination into the architectural guilloché dial, rose gold faceted hour markers, and heat-blued hands engineered to sub-micron accuracy.
+        </p>
+      </header>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+        <figure class="lg:col-span-7 relative group" data-reveal>
+          <div class="relative rounded-2xl overflow-hidden border border-secondary/30 shadow-[0_20px_50px_rgba(0,0,0,0.9)] aspect-[4/3]">
+            <img alt="Ultra close-up macro of perpetual chronometer dial with intricate hand engraving and rose gold indices" class="w-full h-full object-cover object-center transform transition-transform duration-700 group-hover:scale-105" src="images/guilloche-macro.webp" width="1149" height="860" loading="lazy" decoding="async">
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 via-transparent to-transparent pointer-events-none"></div>
+            <div class="absolute top-3 right-3 md:top-6 md:right-6 px-3 py-1.5 rounded-full bg-surface-container-lowest/80 backdrop-blur-md border border-secondary/30 flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-primary animate-ping"></span>
+              <span class="font-technical-mono text-[10px] md:text-[11px] text-secondary tracking-widest uppercase"><span class="md:hidden">40x Macro</span><span class="hidden md:inline">40x Macro Inspection</span></span>
+            </div>
+            <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6 flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-3 max-md:bg-surface-container-lowest/80 max-md:backdrop-blur-md max-md:p-2 max-md:rounded-lg max-md:border max-md:border-secondary/20">
+              <span>
+                <span class="font-label-gold text-secondary text-label-gold uppercase tracking-[0.2em] block">Cartouche &amp; Guilloché</span>
+                <span class="hidden md:block font-title-md text-on-surface font-light">Superlative Dial Engraving Standard</span>
+              </span>
+              <span class="flex items-center gap-2 text-primary font-technical-mono text-[11px] md:text-[12px]">
+                <span class="material-symbols-outlined text-[16px] md:text-[18px]">verified</span>
+                <span>Certified ±2s / Day</span>
+              </span>
+            </figcaption>
+          </div>
+        </figure>
+
+        <ul class="lg:col-span-5 flex flex-col gap-2.5 md:gap-4 list-none m-0 p-0">
+          <li data-reveal style="--rd:.05s">
+            <article class="p-3 md:p-5 rounded-xl bg-surface-container-low border border-secondary/15 hover:border-secondary/40 transition-all">
+              <div class="flex items-center justify-between pb-1 md:pb-2">
+                <span class="font-technical-mono text-secondary uppercase text-[10px] md:text-[11px] tracking-wider">Facet 01</span>
+                <span class="material-symbols-outlined text-secondary text-[18px] md:text-[20px]">lens_blur</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-on-surface font-medium">Rose Gold Appliqué Indices</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant font-light mt-1">Individually set by hand with chamfered polished facets that reflect subtle shifts in ambient lighting with liquid brilliance.</p>
+            </article>
+          </li>
+          <li data-reveal style="--rd:.15s">
+            <article class="p-3 md:p-5 rounded-xl bg-surface-container-low border border-secondary/15 hover:border-secondary/40 transition-all">
+              <div class="flex items-center justify-between pb-1 md:pb-2">
+                <span class="font-technical-mono text-secondary uppercase text-[10px] md:text-[11px] tracking-wider">Facet 02</span>
+                <span class="material-symbols-outlined text-secondary text-[18px] md:text-[20px]">palette</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-on-surface font-medium">Thermal Heat-Blued Hands</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant font-light mt-1">Steeped to precisely 290°C to achieve a natural, permanent cobalt blue oxidation that guards against corrosion for generations.</p>
+            </article>
+          </li>
+          <li data-reveal style="--rd:.25s">
+            <article class="p-3 md:p-5 rounded-xl bg-surface-container-low border border-secondary/15 hover:border-secondary/40 transition-all">
+              <div class="flex items-center justify-between pb-1 md:pb-2">
+                <span class="font-technical-mono text-secondary uppercase text-[10px] md:text-[11px] tracking-wider">Facet 03</span>
+                <span class="material-symbols-outlined text-secondary text-[18px] md:text-[20px]">fingerprint</span>
+              </div>
+              <h3 class="font-title-md text-title-md text-on-surface font-medium">Relief Cartouche Script</h3>
+              <p class="font-body-md text-body-md text-on-surface-variant font-light mt-1">Precision relief stamping bearing the revered "PERPETUAL CHRONOMETER" testament across a multi-tiered geometric labyrinth.</p>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. INTERACTIVE TIMEPIECE CONFIGURATOR
+       ========================================================================= -->
+  <section id="configurator" aria-labelledby="config-title" class="w-full py-space-xl px-margin-mobile lg:px-margin bg-surface-container-lowest relative z-10">
+    <div class="max-w-7xl mx-auto space-y-space-lg">
+      <header class="flex flex-col md:flex-row md:items-end justify-between gap-space-md border-b border-secondary/15 pb-space-md" data-reveal>
+        <div class="space-y-space-xs max-w-xl">
+          <p class="inline-flex items-center gap-2 text-secondary">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-gold text-label-gold uppercase tracking-[0.25em]">Interactive Atelier Studio</span>
+          </p>
+          <h2 id="config-title" class="font-headline-lg text-headline-lg text-on-surface font-light">TIMEPIECE CONFIGURATOR</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant font-light">Simulate case proportions, precious alloys, and bracelet combinations for your bespoke appointment.</p>
+        </div>
+        <p class="font-technical-mono text-technical-mono text-secondary">Rolex-Inspired Bespoke Preview</p>
+      </header>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+        <!-- Interactive Preview Screen -->
+        <div class="lg:col-span-7 flex flex-col items-center justify-center p-4 sm:p-8 rounded-2xl bg-surface-container-lowest border border-secondary/20 relative lg:min-h-[460px]" data-reveal>
+          <div class="absolute inset-0 rounded-2xl bg-[radial-gradient(circle_at_center,_rgba(0,96,57,0.25)_0%,_transparent_75%)] pointer-events-none"></div>
+          <div class="relative z-10 w-56 sm:w-80 aspect-square flex items-center justify-center">
+            <div id="config-stage" class="w-full h-full">
+              <img alt="Configured timepiece preview" class="img-fade w-full h-full object-contain" id="config-watch-img" src="images/day-date-40-studio.webp" width="1200" height="1200" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <p class="relative z-10 mt-4 sm:mt-6 px-4 sm:px-6 py-2 sm:py-2.5 rounded-xl sm:rounded-full bg-surface-container-high/80 border border-secondary/25 backdrop-blur-md flex flex-wrap items-center justify-center gap-x-3 sm:gap-x-4 gap-y-1 text-center" aria-live="polite">
+            <span class="font-technical-mono text-[12px] text-secondary" id="cfg-summary-diameter">40 mm</span>
+            <span class="text-outline" aria-hidden="true">•</span>
+            <span class="font-technical-mono text-[12px] text-on-surface" id="cfg-summary-metal">18 ct Yellow Gold</span>
+            <span class="text-outline" aria-hidden="true">•</span>
+            <span class="font-technical-mono text-[12px] text-secondary" id="cfg-summary-bracelet">President Bracelet</span>
+          </p>
+        </div>
+
+        <!-- Controls Panel -->
+        <div class="lg:col-span-5 flex flex-col space-y-5 sm:space-y-6 p-4 sm:p-6 rounded-2xl bg-surface-container-low border border-secondary/15" data-reveal>
+          <fieldset class="border-0 p-0 m-0">
+            <legend class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] block mb-2 p-0">1. Case Diameter</legend>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" class="opt dia-btn py-2.5 px-3 font-technical-mono text-[12px] rounded" aria-pressed="false" data-action="cfg-dia" data-value="36 mm">36 mm</button>
+              <button type="button" class="opt dia-btn py-2.5 px-3 font-technical-mono text-[12px] rounded" aria-pressed="false" data-action="cfg-dia" data-value="39 mm">39 mm</button>
+              <button type="button" class="opt dia-btn py-2.5 px-3 font-technical-mono text-[12px] rounded" aria-pressed="true" data-action="cfg-dia" data-value="40 mm">40 mm</button>
+            </div>
+          </fieldset>
+          <fieldset class="border-0 p-0 m-0">
+            <legend class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] block mb-2 p-0">2. Noble Metal Alloy</legend>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" class="opt metal-btn py-2.5 px-2.5 sm:px-3 font-body-md text-[12px] sm:text-[13px] rounded flex items-center gap-2 text-left leading-tight" aria-pressed="true" data-action="cfg-metal" data-value="18 ct Yellow Gold" data-type="gold"><span class="w-3 h-3 shrink-0 rounded-full bg-[#e9c176] inline-block"></span><span>18 ct Yellow Gold</span></button>
+              <button type="button" class="opt metal-btn py-2.5 px-2.5 sm:px-3 font-body-md text-[12px] sm:text-[13px] rounded flex items-center gap-2 text-left leading-tight" aria-pressed="false" data-action="cfg-metal" data-value="Oystersteel 904L" data-type="steel"><span class="w-3 h-3 shrink-0 rounded-full bg-[#d0d4dc] inline-block"></span><span>Oystersteel 904L</span></button>
+              <button type="button" class="opt metal-btn py-2.5 px-2.5 sm:px-3 font-body-md text-[12px] sm:text-[13px] rounded flex items-center gap-2 text-left leading-tight" aria-pressed="false" data-action="cfg-metal" data-value="18 ct Everose Gold" data-type="everose"><span class="w-3 h-3 shrink-0 rounded-full bg-[#dfa489] inline-block"></span><span>18 ct Everose Gold</span></button>
+              <button type="button" class="opt metal-btn py-2.5 px-2.5 sm:px-3 font-body-md text-[12px] sm:text-[13px] rounded flex items-center gap-2 text-left leading-tight" aria-pressed="false" data-action="cfg-metal" data-value="950 Platinum" data-type="plat"><span class="w-3 h-3 shrink-0 rounded-full bg-[#b8c6d1] inline-block"></span><span>950 Platinum</span></button>
+            </div>
+          </fieldset>
+          <fieldset class="border-0 p-0 m-0">
+            <legend class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] block mb-2 p-0">3. Bracelet Architecture</legend>
+            <div class="grid grid-cols-3 gap-2">
+              <button type="button" class="opt brc-btn py-2.5 px-1 sm:px-2 font-technical-mono text-[10px] sm:text-[11px] rounded uppercase" aria-pressed="true" data-action="cfg-brc" data-value="President">President</button>
+              <button type="button" class="opt brc-btn py-2.5 px-1 sm:px-2 font-technical-mono text-[10px] sm:text-[11px] rounded uppercase" aria-pressed="false" data-action="cfg-brc" data-value="Jubilee">Jubilee</button>
+              <button type="button" class="opt brc-btn py-2.5 px-1 sm:px-2 font-technical-mono text-[10px] sm:text-[11px] rounded uppercase" aria-pressed="false" data-action="cfg-brc" data-value="Oyster">Oyster</button>
+            </div>
+          </fieldset>
+          <a class="w-full py-3.5 bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-gold text-label-gold uppercase tracking-[0.15em] sm:tracking-[0.2em] font-semibold text-center transition-all block active:scale-[0.99]" href="#concierge" data-action="cfg-inquire">Inquire With This Configuration</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       7. BRAND STORY & HERITAGE
+       ========================================================================= -->
+  <section id="legacy" aria-labelledby="legacy-title" class="w-full bg-gradient-to-b from-surface to-surface-container-lowest py-space-xl px-margin-mobile lg:px-margin border-t border-secondary/10 relative z-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-x-space-xl gap-y-space-md md:gap-y-space-xl items-center justify-items-center md:justify-items-stretch text-center md:text-left">
+
+        <!-- Visual -->
+        <div class="order-4 md:order-none lg:col-span-6 relative w-full mb-8 sm:mb-0" data-reveal>
+          <figure class="relative rounded-xl overflow-hidden border border-secondary/25 shadow-2xl">
+            <div class="aspect-[4/3] lg:aspect-[528/520]">
+              <img alt="Rolex Day-Date with fluted gold bezel and emerald green dial" class="w-full h-full object-cover object-center filter saturate-[1.05]" src="images/day-date-fluted.webp" width="1200" height="909" loading="lazy" decoding="async">
+            </div>
+            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent pointer-events-none"></div>
+            <figcaption class="absolute bottom-3 left-3 right-3 md:bottom-6 md:left-6 md:right-6 p-3 md:p-5 rounded-lg bg-surface-container/90 backdrop-blur-md border border-secondary/20 flex items-center gap-3 md:gap-4 text-left">
+              <span class="w-9 h-9 md:w-12 md:h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+                <svg aria-hidden="true" class="w-5 h-5 md:w-7 md:h-7 fill-current" viewBox="0 0 24 24">
+                  <path d="M5 19h14v1.5H5V19zm14-11l-3.5 5.5-3.5-7-3.5 7L5 8l1.5 9h11L19 8zm-7-2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm-6.5 2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm13 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"></path>
+                </svg>
+              </span>
+              <span class="min-w-0">
+                <span class="font-headline-sm text-[14px] md:text-[16px] text-on-surface font-light block">Perpetual Spirit</span>
+                <span class="font-technical-mono text-[9px] md:text-technical-mono text-secondary uppercase tracking-widest block">Hans Wilsdorf Foundation • Geneva</span>
+              </span>
+            </figcaption>
+          </figure>
+          <!-- Decorative Offset Card -->
+          <aside class="hidden sm:block absolute -bottom-6 -right-2 md:-bottom-8 md:-right-8 p-4 md:p-6 bg-surface-container-high rounded-lg border border-secondary/30 shadow-xl max-w-[16rem] md:max-w-xs z-20 text-left">
+            <p class="font-body-md text-[13px] text-on-surface-variant italic">"We want to be first in the field and Rolex should be seen as the one and only — the best."</p>
+            <span class="font-label-gold text-[10px] text-secondary tracking-widest uppercase block mt-2">— Hans Wilsdorf, 1914</span>
+          </aside>
+        </div>
+
+        <!-- Copy -->
+        <div class="contents md:flex md:flex-col md:space-y-space-md lg:col-span-6">
+          <p class="order-1 md:order-none inline-flex items-center justify-center md:justify-start gap-2 text-secondary" data-reveal>
+            <span class="material-symbols-outlined text-[18px]">history_edu</span>
+            <span class="font-label-gold text-label-gold uppercase tracking-[0.2em] md:tracking-[0.25em]">Heritage &amp; Continuity</span>
+          </p>
+          <h2 id="legacy-title" class="order-2 md:order-none font-headline-lg text-headline-lg text-on-surface font-light leading-tight" data-reveal>
+            BEYOND TIME. <br>
+            <span class="italic text-secondary">BEYOND EXPECTATIONS.</span>
+          </h2>
+          <blockquote class="order-5 md:order-none font-headline-sm text-headline-sm font-light border-l-2 border-secondary pl-4 my-2 leading-relaxed text-secondary/95 text-left" data-reveal>
+            "True luxury is not simply measured in hours. It is defined by unwavering dedication, relentless precision, and an enduring commitment to perpetual excellence."
+          </blockquote>
+          <div class="order-6 md:order-none space-y-4 font-body-md text-body-md text-on-surface-variant font-light leading-relaxed text-left" data-reveal>
+            <p>In 1926, Rolex created the Oyster — the world's first waterproof wristwatch — forever sealing the movement against dust, water, and atmospheric shock. Five years later came the Perpetual rotor, an ingenious self-winding mechanism that harnessed the natural movement of the wearer's wrist to power the escapement continuously.</p>
+            <p class="hidden md:block">Today, from our four manufacture sites across Switzerland, every single balance spring, gold alloy, and Cerachrom ceramic insert is developed and manufactured entirely in-house. This complete autonomy ensures that every timepiece bearing the Crown maintains unprecedented chronometric integrity.</p>
+          </div>
+          <div class="order-7 md:order-none w-full pt-4 flex flex-row sm:items-center justify-between gap-4 border-t border-outline-variant/30 text-left" data-reveal>
+            <p class="flex flex-col">
+              <span class="font-headline-sm text-[18px] md:text-[20px] italic text-secondary">Montres Rolex SA</span>
+              <span class="font-technical-mono text-technical-mono text-outline uppercase tracking-wider">Académie Horlogère de Genève</span>
+            </p>
+            <p class="flex md:hidden items-center gap-1.5 text-secondary self-center">
+              <span class="material-symbols-outlined text-[20px]">verified_user</span>
+              <span class="font-label-gold text-[9px] uppercase tracking-wider">5-Year Guarantee</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       8. VIP CONCIERGE PRIVATE VIEWING SUITE
+       ========================================================================= -->
+  <section id="concierge" aria-labelledby="concierge-title" class="w-full py-space-xl px-margin-mobile lg:px-margin bg-gradient-to-b from-surface-container-lowest via-surface-container-low to-surface-container-lowest relative z-10">
+    <div class="max-w-7xl mx-auto rounded-3xl md:border md:border-secondary/25 p-0 md:p-8 lg:p-14 md:bg-surface-container-lowest/90 md:backdrop-blur-xl md:shadow-[0_25px_60px_rgba(0,0,0,0.85)]" data-reveal>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-center">
+        <!-- Left Column: Copy & Details -->
+        <div class="lg:col-span-5 space-y-space-md">
+          <p class="inline-flex items-center gap-2 px-3 py-1 rounded bg-secondary/10 border border-secondary/30">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] md:tracking-[0.25em]">Private Salon Consultation</span>
+          </p>
+          <h2 id="concierge-title" class="font-headline-lg text-headline-lg text-on-surface font-light leading-tight">
+            BOOK YOUR PRIVATE <br>
+            <span class="gold-gradient-text italic">VIEWING SUITE.</span>
+          </h2>
+          <p class="font-body-md text-body-md text-on-surface-variant font-light leading-relaxed">
+            Step into the serene quietude of an official salon. Receive dedicated horological guidance, personalized wrist fittings, and exclusive previews of master references.
+          </p>
+          <ul class="space-y-3 pt-2 list-none m-0 p-0">
+            <li class="flex items-start gap-3 text-secondary font-technical-mono text-[11px] md:text-[12px] uppercase leading-snug">
+              <span class="material-symbols-outlined text-[18px]">verified</span>
+              <span>One-on-One Dedicated Horological Advisor</span>
+            </li>
+            <li class="flex items-start gap-3 text-secondary font-technical-mono text-[11px] md:text-[12px] uppercase leading-snug">
+              <span class="material-symbols-outlined text-[18px]">room_service</span>
+              <span>Private Vault Presentation &amp; Champagne Hospitality</span>
+            </li>
+            <li class="flex items-start gap-3 text-secondary font-technical-mono text-[11px] md:text-[12px] uppercase leading-snug">
+              <span class="material-symbols-outlined text-[18px]">lock</span>
+              <span>Confidential Global Client Portfolio Services</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right Column: Interactive Appointment Form -->
+        <div class="lg:col-span-7 bg-surface-container/80 border border-secondary/20 p-4 sm:p-6 md:p-8 rounded-2xl">
+          <form id="salon-form" class="space-y-4" novalidate>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="client-name" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Full Name</label>
+                <input id="client-name" name="name" autocomplete="name" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" placeholder="Lord / Lady / Dr. / Mr." required type="text">
+              </div>
+              <div>
+                <label for="client-email" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Email Correspondence</label>
+                <input id="client-email" name="email" autocomplete="email" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" placeholder="client@privatedomain.ch" required type="email">
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="salon-location" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Preferred Salon Location</label>
+                <select id="salon-location" name="location" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none">
+                  <option value="geneva">Geneva Flagship Salon — Rue du Rhône</option>
+                  <option value="dubai">Dubai Mall Haute Boutique — Downtown</option>
+                  <option value="paris">Paris Salon — Place Vendôme</option>
+                  <option value="zurich">Zurich Atelier — Bahnhofstrasse</option>
+                  <option value="newyork">New York Salon — Fifth Avenue</option>
+                  <option value="london">London Salon — New Bond Street</option>
+                  <option value="tokyo">Tokyo Salon — Ginza</option>
+                </select>
+              </div>
+              <div>
+                <label for="salon-timepiece" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Timepiece of Interest</label>
+                <select id="salon-timepiece" name="timepiece" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none">
+                  <option value="daytona">Cosmograph Daytona 'John Mayer' Legend (Ref. 116508)</option>
+                  <option value="submariner">Submariner Date 'Kermit/Hulk' (Ref. 126610LV)</option>
+                  <option value="gmtmaster">GMT-Master II Yellow Gold (Ref. 126718GRNR)</option>
+                  <option value="daydate36">Day-Date 36 Roman Emerald (Ref. 128238)</option>
+                  <option value="daydate">Day-Date 40 (18 ct Yellow Gold &amp; Olive Green)</option>
+                  <option value="1908">Perpetual 1908 (18 ct Yellow Gold &amp; White Dial)</option>
+                  <option value="metiers">Métiers d'Art &amp; Bespoke Commissions</option>
+                </select>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label for="salon-date" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Preferred Consultation Date</label>
+                <input id="salon-date" name="date" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none" required type="date">
+              </div>
+              <div>
+                <label for="salon-time" class="font-technical-mono text-[11px] text-secondary uppercase tracking-wider block mb-1">Preferred Suite Time</label>
+                <select id="salon-time" name="time" class="w-full bg-surface-container-low border border-secondary/20 rounded px-4 py-3 text-on-surface text-[16px] md:text-body-md focus:border-secondary focus:ring-1 focus:ring-secondary outline-none">
+                  <option>Morning (10:00 - 12:30)</option>
+                  <option>Afternoon (14:00 - 16:30)</option>
+                  <option>Private Twilight Salon (17:30 - 19:30)</option>
+                </select>
+              </div>
+            </div>
+            <button class="w-full py-3.5 md:py-4 px-3 bg-secondary hover:bg-secondary-fixed text-on-secondary font-label-gold text-label-gold uppercase tracking-[0.12em] md:tracking-[0.2em] font-semibold text-center leading-snug transition-all shadow-[0_0_20px_rgba(233,193,118,0.25)] mt-2 active:scale-[0.99]" type="submit">
+              Confirm Private Salon Invitation Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       9. GUARANTEES & WORLDWIDE SERVICE NETWORK
+       ========================================================================= -->
+  <section aria-label="Guarantees and service network" class="w-full py-space-lg px-margin-mobile lg:px-margin bg-surface-container-lowest border-t border-secondary/15 relative z-10">
+    <ul class="max-w-7xl mx-auto grid grid-cols-3 gap-2 md:gap-gutter text-center list-none m-0 p-0">
+      <li class="p-3 md:p-6 rounded-lg md:rounded-xl bg-surface-container-low/60 border border-secondary/10 flex flex-col items-center" data-reveal>
+        <span class="material-symbols-outlined text-secondary text-[24px] md:text-[36px] mb-1 md:mb-3">verified_user</span>
+        <h3 class="font-headline-sm text-[11px] md:text-[18px] text-on-surface font-light leading-snug"><span class="md:hidden">Five-Year Guarantee</span><span class="hidden md:inline">Five-Year International Guarantee</span></h3>
+        <p class="md:hidden font-technical-mono text-[9px] tracking-normal text-outline mt-0.5">Green seal assurance</p>
+        <p class="hidden md:block font-body-md text-[13px] text-on-surface-variant font-light mt-1 max-w-xs">Every chronometer leaving our Geneva workshops is accompanied by the green seal testament and 5-year worldwide assurance.</p>
+      </li>
+      <li class="p-3 md:p-6 rounded-lg md:rounded-xl bg-surface-container-low/60 border border-secondary/10 flex flex-col items-center" data-reveal style="--rd:.1s">
+        <span class="material-symbols-outlined text-secondary text-[24px] md:text-[36px] mb-1 md:mb-3">public</span>
+        <h3 class="font-headline-sm text-[11px] md:text-[18px] text-on-surface font-light leading-snug"><span class="md:hidden">Official Network</span><span class="hidden md:inline">Official Service Network</span></h3>
+        <p class="md:hidden font-technical-mono text-[9px] tracking-normal text-outline mt-0.5">100+ Flagships</p>
+        <p class="hidden md:block font-body-md text-[13px] text-on-surface-variant font-light mt-1 max-w-xs">Expert maintenance by certified master horologists across over 100 dedicated international flagship service centers.</p>
+      </li>
+      <li class="p-3 md:p-6 rounded-lg md:rounded-xl bg-surface-container-low/60 border border-secondary/10 flex flex-col items-center" data-reveal style="--rd:.2s">
+        <span class="material-symbols-outlined text-secondary text-[24px] md:text-[36px] mb-1 md:mb-3">lock_clock</span>
+        <h3 class="font-headline-sm text-[11px] md:text-[18px] text-on-surface font-light leading-snug"><span class="md:hidden">Heritage Registry</span><span class="hidden md:inline">Enduring Heritage Registry</span></h3>
+        <p class="md:hidden font-technical-mono text-[9px] tracking-normal text-outline mt-0.5">Geneva archives</p>
+        <p class="hidden md:block font-body-md text-[13px] text-on-surface-variant font-light mt-1 max-w-xs">Every serial number and individual movement caliber is permanently cataloged in the Geneva historical manufacture archives.</p>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<!-- =========================================================================
+     FOOTER
+     ========================================================================= -->
+<footer class="w-full bg-surface-container-lowest pt-space-xl pb-24 md:pb-space-lg border-t border-secondary/15">
+  <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter pb-space-xl text-center md:text-left">
+      <div class="lg:col-span-4 flex flex-col items-center md:items-start gap-space-md">
+        <div class="flex items-center gap-space-xs">
+          <svg aria-hidden="true" class="w-6 h-6 text-secondary fill-current" viewBox="0 0 24 24">
+            <path d="M5 19h14v1.5H5V19zm14-11l-3.5 5.5-3.5-7-3.5 7L5 8l1.5 9h11L19 8zm-7-2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm-6.5 2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm13 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"></path>
+          </svg>
+          <span class="font-headline-sm text-headline-sm text-on-surface font-light tracking-widest uppercase">ROLEX</span>
+        </div>
+        <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Perpetual excellence, architectural precision, and the quiet authority of Swiss master watchmaking since 1905.</p>
+        <p class="inline-flex items-center gap-2 px-3 py-1 bg-surface-container border border-secondary/20 rounded w-fit">
+          <span class="font-technical-mono text-[11px] text-secondary tracking-widest uppercase">Rolex-inspired concept design</span>
+        </p>
+      </div>
+
+      <nav class="lg:col-span-3 flex flex-col items-center md:items-start gap-space-sm" aria-label="Concierge services">
+        <h3 class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em]">Concierge Services</h3>
+        <ul class="flex flex-col items-center md:items-start gap-space-xs font-body-md text-body-md text-on-surface-variant list-none m-0 p-0">
+          <li><a href="#concierge" class="hover:text-secondary transition-colors">Private Salons &amp; Consultations</a></li>
+          <li><button type="button" class="hover:text-secondary transition-colors text-left" data-action="info" data-info="servicing">Servicing &amp; Restoration</button></li>
+          <li><button type="button" class="hover:text-secondary transition-colors text-left" data-action="info" data-info="certificate">Certificate of Authenticity</button></li>
+          <li><button type="button" class="hover:text-secondary transition-colors text-left" data-action="info" data-info="care">Global Care Protocol</button></li>
+          <li><a href="#metiers-dart" class="hover:text-secondary transition-colors" data-inquire="metiers">Bespoke Commissions</a></li>
+        </ul>
+      </nav>
+
+      <div class="md:col-span-2 lg:col-span-5 flex flex-col items-center md:items-start gap-space-md">
+        <h3 class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em]">The Gazette &amp; Privileges</h3>
+        <p class="font-body-md text-body-md text-on-surface-variant">Subscribe to receive curated invitations to private previews, horological disclosures, and commemorative releases.</p>
+        <form id="gazette-form" class="flex w-full items-stretch max-w-md md:max-w-none" novalidate>
+          <label for="gazette-input" class="sr-only">Email address</label>
+          <input id="gazette-input" class="min-w-0 w-full bg-surface-container px-4 py-3 font-body-md text-[16px] md:text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:ring-1 focus:ring-secondary border border-secondary/20" placeholder="Enter your correspondence address" required type="email" autocomplete="email">
+          <button class="px-5 md:px-6 bg-primary-container text-on-primary-container hover:bg-secondary hover:text-on-secondary transition-colors font-label-gold text-label-gold uppercase tracking-[0.15em] shrink-0" type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Boutiques Directory -->
+    <div class="py-space-md border-t border-secondary/10 flex flex-col md:flex-row items-center justify-between gap-space-md">
+      <ul class="flex flex-wrap items-center justify-center md:justify-start gap-x-space-md gap-y-space-xs list-none m-0 p-0">
+        <li class="font-technical-mono text-technical-mono text-secondary uppercase">Ateliers &amp; Boutiques:</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="geneva">Geneva</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="zurich">Zurich</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="dubai">Dubai</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="newyork">New York</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="london">London</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="paris">Paris</button></li>
+        <li class="font-technical-mono text-technical-mono text-outline-variant" aria-hidden="true">•</li>
+        <li><button type="button" class="font-technical-mono text-technical-mono text-on-surface-variant hover:text-on-surface transition-colors" data-action="city" data-city="tokyo">Tokyo</button></li>
+      </ul>
+      <p class="flex items-center gap-space-sm">
+        <span class="font-technical-mono text-technical-mono text-on-surface-variant">SWISS MADE</span>
+        <span class="material-symbols-outlined text-secondary text-[16px]">grade</span>
+        <span class="font-technical-mono text-technical-mono text-on-surface-variant">MANUFACTURE</span>
+      </p>
+    </div>
+
+    <!-- Copyright & Legal -->
+    <div class="pt-space-md flex flex-col md:flex-row items-center justify-between gap-space-sm font-technical-mono text-technical-mono text-outline text-center md:text-left">
+      <p>© 2025 Montres Rolex SA tribute — Independent Rolex-inspired concept design.</p>
+      <ul class="flex items-center gap-space-md list-none m-0 p-0">
+        <li><button type="button" class="hover:text-on-surface transition-colors" data-action="info" data-info="legal">Legal Notices</button></li>
+        <li><button type="button" class="hover:text-on-surface transition-colors" data-action="info" data-info="privacy">Privacy Policy</button></li>
+        <li><button type="button" class="hover:text-on-surface transition-colors" data-action="info" data-info="cookies">Cookies</button></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<!-- =========================================================================
+     PHONE BOTTOM TAB NAVIGATION
+     ========================================================================= -->
+<nav id="bottom-nav" class="md:hidden fixed bottom-0 left-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-1px_12px_rgba(0,0,0,0.5)]" aria-label="Sections">
+  <div class="flex justify-around items-center h-16 px-1 border-t border-secondary/20 bg-surface-container-lowest/95">
+    <a class="tab-link flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant transition-colors gap-0.5" data-spy="home atelier-stats" href="#home"><span class="material-symbols-outlined text-[20px]">home</span><span class="font-label-gold text-[9px] tracking-wider uppercase">Home</span></a>
+    <a class="tab-link flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant transition-colors gap-0.5" data-spy="collection daytona-spotlight" href="#collection"><span class="material-symbols-outlined text-[20px]">watch</span><span class="font-label-gold text-[9px] tracking-wider uppercase">Catalog</span></a>
+    <a class="tab-link flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant transition-colors gap-0.5" data-spy="metiers-dart craftsmanship" href="#metiers-dart"><span class="material-symbols-outlined text-[20px]">brush</span><span class="font-label-gold text-[9px] tracking-wider uppercase">Atelier</span></a>
+    <a class="tab-link flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant transition-colors gap-0.5" data-spy="configurator legacy" href="#configurator"><span class="material-symbols-outlined text-[20px]">tune</span><span class="font-label-gold text-[9px] tracking-wider uppercase">Configure</span></a>
+    <a class="tab-link flex flex-col items-center justify-center w-14 h-12 text-on-surface-variant transition-colors gap-0.5" data-spy="concierge" href="#concierge"><span class="material-symbols-outlined text-[20px]">meeting_room</span><span class="font-label-gold text-[9px] tracking-wider uppercase">Salon</span></a>
+  </div>
+</nav>
+
+<!-- =========================================================================
+     INTERACTIVE SPECIFICATIONS MODAL
+     ========================================================================= -->
+<div id="watch-specs-modal" class="overlay items-end md:items-center p-0 md:p-4" role="dialog" aria-modal="true" aria-labelledby="modal-watch-name" aria-hidden="true">
+  <div id="modal-card" class="sheet sheet-bottom w-full max-w-4xl bg-surface-container-low border border-secondary/30 rounded-t-2xl md:rounded-xl overflow-hidden shadow-2xl flex flex-col max-h-[92vh] md:max-h-[90vh]">
+    <div class="px-4 md:px-6 py-3 md:py-4 bg-surface-container-lowest border-b border-secondary/20 flex items-center justify-between gap-3">
+      <div class="flex items-center gap-3 min-w-0">
+        <svg aria-hidden="true" class="w-5 h-5 shrink-0 text-secondary fill-current" viewBox="0 0 24 24">
+          <path d="M5 19h14v1.5H5V19zm14-11l-3.5 5.5-3.5-7-3.5 7L5 8l1.5 9h11L19 8zm-7-2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm-6.5 2a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5zm13 0a1.25 1.25 0 100-2.5 1.25 1.25 0 000 2.5z"></path>
+        </svg>
+        <span class="font-technical-mono text-technical-mono text-secondary tracking-widest uppercase truncate" id="modal-ref-tag">SUPERLATIVE CHRONOMETER DOSSIER</span>
+      </div>
+      <button type="button" aria-label="Close dossier" class="w-8 h-8 shrink-0 rounded-full bg-surface-container hover:bg-surface-container-highest text-on-surface flex items-center justify-center transition-colors" data-action="close-overlay" data-autofocus>
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div id="modal-body" class="p-4 md:p-6 overflow-y-auto grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-8 items-start">
+      <div class="md:col-span-5 bg-surface-container-lowest rounded-lg p-4 md:p-6 border border-secondary/15 flex flex-col items-center justify-center" data-in style="--i:0">
+        <img alt="Watch detailed view" class="img-fade w-full h-48 md:h-64 object-contain" id="modal-image" src="images/daytona-studio.webp" width="781" height="780" decoding="async">
+        <h3 class="font-headline-sm text-[18px] md:text-[20px] text-on-surface font-light text-center mt-4" id="modal-watch-name">Day-Date 40</h3>
+        <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em] mt-1" id="modal-watch-price">Price Upon Request</span>
+      </div>
+
+      <div class="md:col-span-7 space-y-4">
+        <div class="border-b border-outline-variant/20 pb-2" data-in style="--i:1">
+          <h4 class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.2em]">Technical Characteristics</h4>
+        </div>
+        <dl class="space-y-1 md:space-y-2.5 font-body-md text-[14px]">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:2"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Model Reference</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-ref">228238</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:3"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Case Diameter</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-diameter">40 mm</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:4"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Material</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-material">18 ct Yellow Gold</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:5"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Bezel</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-bezel">Fluted 18 ct Yellow Gold</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:6"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Dial</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-dial">Sunburst Emerald Green</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:7"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Movement</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-calibre">Calibre 3255, Manufacture Rolex</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:8"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Precision</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-precision">-2/+2 sec/day, after casing</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5 border-b border-outline-variant/10" data-in style="--i:9"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Power Reserve</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-power">Approximately 70 Hours</dd></div>
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-0.5 sm:gap-4 py-1.5" data-in style="--i:10"><dt class="text-outline uppercase font-technical-mono text-[11px] tracking-wider">Water Resistance</dt><dd class="text-on-surface font-medium sm:text-right" id="spec-water">100 metres / 330 feet</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="px-4 md:px-6 py-3 md:py-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] bg-surface-container-lowest border-t border-secondary/20 flex flex-col sm:flex-row items-center justify-between gap-3 md:gap-4">
+      <span class="hidden sm:block font-technical-mono text-technical-mono text-outline">Subject to official boutique allocation</span>
+      <div class="flex items-center gap-3 w-full sm:w-auto">
+        <button type="button" class="flex-1 sm:flex-none px-6 py-2.5 border border-outline-variant text-on-surface-variant hover:text-on-surface hover:border-secondary/50 transition-colors font-label-gold text-label-gold uppercase tracking-widest" data-action="close-overlay">Close</button>
+        <button type="button" class="flex-[2] sm:flex-none px-4 sm:px-6 py-2.5 bg-secondary text-on-secondary hover:bg-secondary-fixed transition-colors font-label-gold text-label-gold uppercase tracking-widest font-semibold text-center" data-action="reserve">Reserve Private Viewing</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================================
+     CONFIRMATION / INFO MODAL
+     ========================================================================= -->
+<div id="toast-modal" class="overlay items-center p-4" role="dialog" aria-modal="true" aria-labelledby="toast-title" aria-hidden="true">
+  <div class="sheet relative w-full max-w-sm bg-surface-container-low border border-secondary/35 rounded-2xl p-6 text-center shadow-2xl max-h-[90vh] overflow-y-auto">
+    <div class="w-12 h-12 rounded-full bg-secondary/10 border border-secondary/30 text-secondary mx-auto flex items-center justify-center mb-3">
+      <span class="material-symbols-outlined text-[26px]" id="toast-icon">mark_email_read</span>
+    </div>
+    <span class="font-label-gold text-label-gold text-secondary uppercase tracking-[0.25em] block mb-1" id="toast-kicker">Salon Protocol Registered</span>
+    <h3 class="font-headline-sm text-[18px] md:text-[20px] text-on-surface font-light" id="toast-title">Salon Invitation Confirmed</h3>
+    <p class="font-body-md text-[13px] text-on-surface-variant font-light mt-2 leading-relaxed" id="toast-body">Our Geneva client concierge has received your dossier and will reach out within 24 hours.</p>
+    <div class="p-2.5 rounded bg-surface-container-lowest border border-secondary/15 my-4" id="toast-ref-box">
+      <span class="font-technical-mono text-[10px] text-outline uppercase block">Protocol Reference</span>
+      <span class="font-technical-mono text-[12px] text-secondary" id="toast-ref">RLX-0000</span>
+    </div>
+    <button type="button" class="w-full py-2.5 bg-secondary hover:bg-secondary-fixed transition-colors text-on-secondary font-label-gold text-[11px] uppercase tracking-widest font-semibold" data-action="close-overlay" data-autofocus>Understood</button>
+  </div>
+</div>
+
+<!-- =========================================================================
+     SEARCH (phone header)
+     ========================================================================= -->
+<div id="search-modal" class="overlay items-start p-4 pt-[max(1rem,env(safe-area-inset-top))]" role="dialog" aria-modal="true" aria-label="Search the archive" aria-hidden="true">
+  <div class="sheet w-full max-w-lg bg-surface-container-low border border-secondary/35 rounded-2xl p-4 shadow-2xl mt-2">
+    <div class="flex items-center gap-2 border-b border-secondary/20 pb-3">
+      <span class="material-symbols-outlined text-secondary text-[20px]">search</span>
+      <label for="search-input" class="sr-only">Search the manufacture archive</label>
+      <input id="search-input" type="search" autocomplete="off" placeholder="Daytona, Submariner, Calibre, Salon…" class="flex-1 min-w-0 bg-transparent border-0 focus:ring-0 focus:outline-none text-on-surface text-[16px] placeholder:text-outline p-0" data-autofocus>
+      <button type="button" aria-label="Close search" class="w-8 h-8 shrink-0 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface hover:text-secondary" data-action="close-overlay"><span class="material-symbols-outlined text-[18px]">close</span></button>
+    </div>
+    <ul id="search-results" class="mt-2 max-h-[60vh] overflow-y-auto list-none m-0 p-0" aria-live="polite"></ul>
+  </div>
+</div>
+
+<!-- Snackbar -->
+<div id="snack" class="snack px-4 py-2.5 rounded-full bg-surface-container-high border border-secondary/30 text-on-surface font-technical-mono text-[12px] shadow-xl max-w-[90vw] text-center" role="status" aria-live="polite"></div>
+
+<script>
+(() => {
+  'use strict';
+
+  const $  = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => Array.from(r.querySelectorAll(s));
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const root = document.documentElement;
+
+  /* ------------------------------------------------------------------ *
+   * Data
+   * ------------------------------------------------------------------ */
+  const watchData = {
+    submariner: {
+      ref: 'REF. 126610LV', name: "Submariner Date 'Kermit/Hulk' Edition", diameter: '41 mm',
+      material: 'Oystersteel 904L', bezel: 'Unidirectional 60-Minute Rotatable Emerald Cerachrom',
+      dial: 'Intense Emerald Sunburst Dial with Chromalight', calibre: 'Calibre 3235, Manufacture Rolex',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 70 Hours',
+      water: '300 metres / 1,000 feet', price: 'Price Upon Request',
+      image: 'images/submariner-hulk-hand.webp', alt: 'Rolex Submariner Date Kermit Hulk edition in Oystersteel with emerald Cerachrom bezel'
+    },
+    gmtmaster: {
+      ref: 'REF. 126718GRNR', name: 'GMT-Master II Everose & Yellow Gold', diameter: '40 mm',
+      material: '18 ct Yellow Gold', bezel: 'Bidirectional 24-Hour Cerachrom Grey/Black Insert',
+      dial: 'Luminous Emerald Green Sunburst with Gold Indices', calibre: 'Calibre 3285, Dual Time Zone Escapement',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 70 Hours',
+      water: '100 metres / 330 feet', price: 'Price Upon Request',
+      image: 'images/gmt-master-ii.webp', alt: 'Rolex GMT-Master II in 18 ct yellow gold with green dial'
+    },
+    daydate36: {
+      ref: 'REF. 128238', name: 'Day-Date 36 Roman Emerald', diameter: '36 mm',
+      material: '18 ct Yellow Gold', bezel: 'Fluted 18 ct Yellow Gold',
+      dial: 'Deep Green Lacquer with Deconstructed Roman Numerals', calibre: 'Calibre 3255, Manufacture Rolex',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 70 Hours',
+      water: '100 metres / 330 feet', price: 'Price Upon Request',
+      image: 'images/day-date-36-roman.webp', alt: 'Rolex Day-Date 36 with Roman numeral emerald green lacquer dial'
+    },
+    daytona: {
+      ref: 'REF. 116508', name: "Cosmograph Daytona 'John Mayer' Legend", diameter: '40 mm',
+      material: 'Solid 18 ct Yellow Gold', bezel: 'Fixed 18 ct Gold with Engraved Tachymetric Scale',
+      dial: 'Bright Emerald Green Sunburst with Crimson Subdial Rings', calibre: 'Calibre 4130, Column-Wheel Mechanical Chronograph',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 72 Hours',
+      water: '100 metres / 330 feet', price: 'Price Upon Request',
+      image: 'images/daytona-studio.webp', alt: 'Rolex Cosmograph Daytona front studio reference in 18 ct yellow gold'
+    },
+    daydate: {
+      ref: 'REF. 228238-0061', name: 'Oyster Perpetual Day-Date 40', diameter: '40 mm',
+      material: '18 ct Yellow Gold', bezel: 'Fluted 18 ct Yellow Gold',
+      dial: 'Olive / Emerald Green Sunburst with Chromalight', calibre: 'Calibre 3255, Manufacture Rolex',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 70 Hours',
+      water: '100 metres / 330 feet', price: 'Price Upon Request',
+      image: 'images/day-date-40-studio.webp', alt: 'Rolex Day-Date 40 in 18 ct yellow gold with green dial'
+    },
+    '1908': {
+      ref: 'REF. 52508-0002', name: 'Perpetual 1908 Masterpiece', diameter: '39 mm',
+      material: '18 ct Yellow Gold with Sapphire Back', bezel: 'Dual Bezel (Part fluted, part domed 18k)',
+      dial: 'Intense White Lacquer with Arabic Appliqués', calibre: 'Calibre 7140, Syloxi silicon hairspring',
+      precision: '-2/+2 sec/day (Superlative Chronometer)', power: 'Approximately 66 Hours',
+      water: '50 metres / 165 feet', price: 'Price Upon Request',
+      image: 'images/perpetual-1908.webp', alt: 'Rolex Perpetual 1908 in yellow gold with white dial'
+    }
+  };
+
+  const infoData = {
+    servicing:   { icon: 'build',        kicker: 'Concierge Services', title: 'Servicing & Restoration', body: 'Every timepiece is overhauled by certified master horologists using original parts, then re-certified for chronometric precision before it returns to you.' },
+    certificate: { icon: 'workspace_premium', kicker: 'Concierge Services', title: 'Certificate of Authenticity', body: 'Each reference is documented in the Geneva manufacture archives. Your serial number and movement calibre are registered permanently.' },
+    care:        { icon: 'public',       kicker: 'Concierge Services', title: 'Global Care Protocol', body: 'A five-year international guarantee, honoured by more than 100 official service centres worldwide.' },
+    legal:       { icon: 'gavel',        kicker: 'Legal', title: 'Legal Notices', body: 'Concept tribute prototype for horological design study. Not affiliated with or endorsed by Montres Rolex SA.' },
+    privacy:     { icon: 'lock',         kicker: 'Legal', title: 'Privacy Policy', body: 'All correspondence is handled discreetly under Swiss privacy standards.' },
+    cookies:     { icon: 'cookie',       kicker: 'Legal', title: 'Cookies', body: 'Only strictly essential horological preferences are stored on your device.' }
+  };
+
+  const searchIndex = [
+    ...Object.entries(watchData).map(([key, w]) => ({ type: 'watch', key, label: w.name, hint: w.ref, icon: 'watch', words: (w.name + ' ' + w.ref + ' ' + w.material + ' ' + w.calibre + ' ' + w.dial).toLowerCase() })),
+    { type: 'go', key: 'daytona-spotlight', label: 'Cosmograph Daytona spotlight', hint: 'Section', icon: 'speed', words: 'daytona spotlight speed racing chronograph 4130 4131' },
+    { type: 'go', key: 'metiers-dart', label: "Métiers d'Art & bespoke", hint: 'Section', icon: 'brush', words: 'art metier bespoke enamel engraving atelier' },
+    { type: 'go', key: 'craftsmanship', label: 'Craftsmanship', hint: 'Section', icon: 'lens_blur', words: 'craftsmanship guilloche dial hands macro' },
+    { type: 'go', key: 'configurator', label: 'Timepiece configurator', hint: 'Section', icon: 'tune', words: 'configure configurator custom alloy bracelet diameter' },
+    { type: 'go', key: 'legacy', label: 'Heritage & legacy', hint: 'Section', icon: 'history_edu', words: 'legacy heritage history wilsdorf' },
+    { type: 'go', key: 'concierge', label: 'Book a private viewing', hint: 'Section', icon: 'meeting_room', words: 'salon book visit viewing concierge appointment' }
+  ];
+
+  /* ------------------------------------------------------------------ *
+   * Icon font ready (avoids showing ligature text)
+   * ------------------------------------------------------------------ */
+  const iconsReady = () => root.classList.add('icons-ready');
+  if (document.fonts && document.fonts.load) {
+    document.fonts.load('20px "Material Symbols Outlined"').then(iconsReady, iconsReady);
+    setTimeout(iconsReady, 2500);
+  } else { iconsReady(); }
+
+  /* ------------------------------------------------------------------ *
+   * Smooth scrolling between sections
+   * ------------------------------------------------------------------ */
+  const header = $('#site-header');
+  const headerOffset = () => (header ? header.offsetHeight : 0);
+  const easeInOutCubic = t => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+  let scrollRaf = 0;
+
+  function smoothScrollTo(targetY, duration) {
+    cancelAnimationFrame(scrollRaf);
+    const maxY = document.documentElement.scrollHeight - window.innerHeight;
+    targetY = Math.max(0, Math.min(targetY, maxY));
+    const startY = window.scrollY;
+    const dist = targetY - startY;
+    if (reduceMotion || Math.abs(dist) < 2) { window.scrollTo(0, targetY); return; }
+    const dur = duration || Math.min(1200, Math.max(600, Math.abs(dist) * 0.5));
+    const t0 = performance.now();
+    const stop = () => {
+      cancelAnimationFrame(scrollRaf);
+      ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(ev => window.removeEventListener(ev, stop));
+    };
+    ['wheel', 'touchstart', 'keydown', 'mousedown'].forEach(ev => window.addEventListener(ev, stop, { passive: true }));
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, startY + dist * easeInOutCubic(p));
+      if (p < 1) scrollRaf = requestAnimationFrame(step); else stop();
+    };
+    scrollRaf = requestAnimationFrame(step);
+  }
+
+  function goTo(id, opts = {}) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const y = id === 'home' ? 0 : el.getBoundingClientRect().top + window.scrollY - headerOffset();
+    if (opts.instant) window.scrollTo(0, Math.max(0, y)); else smoothScrollTo(y);
+    try { history.replaceState(null, '', '#' + id); } catch (e) { /* sandboxed / file:// */ }
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Overlays (modal, toast, search): focus trap, scroll lock, Esc
+   * ------------------------------------------------------------------ */
+  let openEl = null;
+  let lastFocus = null;
+
+  function lockScroll(lock) {
+    if (lock) {
+      const sbw = window.innerWidth - root.clientWidth;
+      document.body.style.overflow = 'hidden';
+      if (sbw > 0) document.body.style.paddingRight = sbw + 'px';
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+  }
+
+  function openOverlay(el) {
+    if (openEl && openEl !== el) closeOverlay(openEl, true);
+    if (!openEl) lastFocus = document.activeElement;
+    openEl = el;
+    el.setAttribute('aria-hidden', 'false');
+    lockScroll(true);
+    // next frame so the CSS transition always runs
+    requestAnimationFrame(() => {
+      el.classList.add('is-open');
+      setTimeout(() => {
+        const f = $('[data-autofocus]', el);
+        if (f) f.focus({ preventScroll: true });
+      }, 60);
+    });
+  }
+
+  function closeOverlay(el, keepLock) {
+    if (!el) return;
+    el.classList.remove('is-open');
+    el.setAttribute('aria-hidden', 'true');
+    if (openEl === el) openEl = null;
+    if (!keepLock) {
+      lockScroll(false);
+      if (lastFocus && document.contains(lastFocus)) { try { lastFocus.focus({ preventScroll: true }); } catch (e) {} }
+    }
+  }
+
+  document.addEventListener('keydown', e => {
+    if (!openEl) return;
+    if (e.key === 'Escape') { closeOverlay(openEl); return; }
+    if (e.key === 'Tab') {
+      const f = $$('button, a[href], input, select, textarea, [tabindex]:not([tabindex="-1"])', openEl).filter(n => !n.disabled && n.offsetParent !== null);
+      if (!f.length) return;
+      const first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
+  $$('.overlay').forEach(ov => ov.addEventListener('click', e => { if (e.target === ov) closeOverlay(ov); }));
+
+  /* ---------- Snackbar ---------- */
+  const snackEl = $('#snack');
+  let snackTimer;
+  function snack(msg) {
+    snackEl.textContent = msg;
+    snackEl.classList.add('is-show');
+    clearTimeout(snackTimer);
+    snackTimer = setTimeout(() => snackEl.classList.remove('is-show'), 2200);
+  }
+
+  /* ---------- Toast / info modal ---------- */
+  function showToast({ icon, kicker, title, body, ref }) {
+    $('#toast-icon').textContent = icon || 'mark_email_read';
+    $('#toast-kicker').textContent = kicker;
+    $('#toast-title').textContent = title;
+    $('#toast-body').textContent = body;
+    const box = $('#toast-ref-box');
+    if (ref) { $('#toast-ref').textContent = ref; box.hidden = false; } else { box.hidden = true; }
+    openOverlay($('#toast-modal'));
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Watch specifications modal
+   * ------------------------------------------------------------------ */
+  const modal = $('#watch-specs-modal');
+  let currentWatch = 'daytona';
+
+  function setModalImage(src, alt) {
+    const img = $('#modal-image');
+    if (img.getAttribute('src') === src) { img.alt = alt; img.classList.remove('is-swapping'); return; }
+    img.classList.add('is-swapping');
+    const pre = new Image();
+    const apply = () => { img.src = src; img.alt = alt; requestAnimationFrame(() => img.classList.remove('is-swapping')); };
+    pre.onload = apply; pre.onerror = apply;
+    pre.src = src;
+  }
+
+  function openWatchModal(key, srcImg) {
+    const d = watchData[key] || watchData.daydate;
+    currentWatch = watchData[key] ? key : 'daydate';
+    $('#modal-ref-tag').textContent = d.ref;
+    $('#modal-watch-name').textContent = d.name;
+    $('#modal-watch-price').textContent = d.price;
+    $('#spec-ref').textContent = d.ref;
+    $('#spec-diameter').textContent = d.diameter;
+    $('#spec-material').textContent = d.material;
+    $('#spec-bezel').textContent = d.bezel;
+    $('#spec-dial').textContent = d.dial;
+    $('#spec-calibre').textContent = d.calibre;
+    $('#spec-precision').textContent = d.precision;
+    $('#spec-power').textContent = d.power;
+    $('#spec-water').textContent = d.water;
+    setModalImage(srcImg ? (srcImg.getAttribute('src')) : d.image, srcImg ? (srcImg.alt || d.alt) : d.alt);
+    $('#modal-body').scrollTop = 0;
+    openOverlay(modal);
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Booking form helpers
+   * ------------------------------------------------------------------ */
+  const salonForm = $('#salon-form');
+  const selTimepiece = $('#salon-timepiece');
+  const selLocation = $('#salon-location');
+  const dateInput = $('#salon-date');
+  let configChosen = false;
+
+  (function setMinDate() {
+    const d = new Date(Date.now() - new Date().getTimezoneOffset() * 60000);
+    dateInput.min = d.toISOString().slice(0, 10);
+  })();
+
+  function preselect(key) {
+    if (key && selTimepiece.querySelector('option[value="' + key + '"]')) selTimepiece.value = key;
+  }
+
+  function reserveAndScroll(key) {
+    preselect(key);
+    goTo('concierge');
+    setTimeout(() => { const n = $('#client-name'); if (n) n.focus({ preventScroll: true }); }, 900);
+  }
+
+  salonForm.addEventListener('submit', e => {
+    e.preventDefault();
+    if (!salonForm.reportValidity()) return;
+    const name = $('#client-name').value.trim();
+    const salon = selLocation.options[selLocation.selectedIndex].text.split('—')[0].trim();
+    const watch = selTimepiece.options[selTimepiece.selectedIndex].text.split('(')[0].trim();
+    const time = $('#salon-time').value;
+    const date = new Date(dateInput.value + 'T12:00:00');
+    const dateTxt = isNaN(date) ? dateInput.value : date.toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' });
+    let body = 'Greetings ' + name + '. Your private appointment at ' + salon + ' for ' + watch + ' on ' + dateTxt + ' (' + time + ') has been placed on high confidential priority. Our concierge will contact you discreetly within 24 hours.';
+    if (selTimepiece.value === 'metiers' && configChosen) body += ' Configuration: ' + cfgSummary() + '.';
+    showToast({ icon: 'mark_email_read', kicker: 'Salon Protocol Registered', title: 'Salon Invitation Confirmed', body, ref: 'RLX-' + Math.floor(1000 + Math.random() * 9000) });
+    salonForm.reset();
+    configChosen = false;
+  });
+
+  $('#gazette-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.currentTarget, input = $('#gazette-input');
+    if (!f.reportValidity()) return;
+    showToast({ icon: 'mark_email_read', kicker: 'The Gazette', title: 'Subscription Confirmed', body: 'Thank you (' + input.value.trim() + '). You will receive the quarterly Geneva Horological Gazette in strict privacy.' });
+    f.reset();
+  });
+
+  /* ------------------------------------------------------------------ *
+   * Configurator
+   * ------------------------------------------------------------------ */
+  const cfg = { dia: '40 mm', metal: '18 ct Yellow Gold', brc: 'President' };
+  const cfgImg = $('#config-watch-img');
+  const cfgStage = $('#config-stage');
+  const diaScale = { '36 mm': 0.88, '39 mm': 0.95, '40 mm': 1 };
+  const cfgImages = {
+    gold:    { src: 'images/day-date-40-studio.webp', alt: 'Configured timepiece in 18 ct yellow gold' },
+    steel:   { src: 'images/submariner-hulk-dark.webp', alt: 'Configured timepiece in Oystersteel' }
+  };
+  const cfgSummary = () => cfg.dia + ' • ' + cfg.metal + ' • ' + cfg.brc + ' Bracelet';
+
+  function pulse(el, text) {
+    el.textContent = text;
+    el.classList.remove('text-in'); void el.offsetWidth; el.classList.add('text-in');
+  }
+  function press(group, btn) {
+    $$(group).forEach(b => b.setAttribute('aria-pressed', String(b === btn)));
+  }
+  function swapConfigImage(set) {
+    if (cfgImg.getAttribute('src') === set.src) { cfgImg.alt = set.alt; return; }
+    cfgImg.classList.add('is-swapping');
+    const pre = new Image();
+    const apply = () => { cfgImg.src = set.src; cfgImg.alt = set.alt; requestAnimationFrame(() => cfgImg.classList.remove('is-swapping')); };
+    pre.onload = apply; pre.onerror = apply; pre.src = set.src;
+  }
+  function setDiameter(btn) {
+    cfg.dia = btn.dataset.value;
+    press('.dia-btn', btn);
+    cfgStage.style.setProperty('--s', diaScale[cfg.dia] || 1);
+    pulse($('#cfg-summary-diameter'), cfg.dia);
+    configChosen = true;
+  }
+  function setMetal(btn) {
+    cfg.metal = btn.dataset.value;
+    press('.metal-btn', btn);
+    const type = btn.dataset.type;
+    swapConfigImage(type === 'steel' || type === 'plat' ? cfgImages.steel : cfgImages.gold);
+    cfgImg.style.filter = type === 'everose' ? 'sepia(.25) hue-rotate(-14deg) saturate(1.15)' : type === 'plat' ? 'saturate(.85) brightness(1.04)' : '';
+    pulse($('#cfg-summary-metal'), cfg.metal);
+    configChosen = true;
+  }
+  function setBracelet(btn) {
+    cfg.brc = btn.dataset.value;
+    press('.brc-btn', btn);
+    pulse($('#cfg-summary-bracelet'), cfg.brc + ' Bracelet');
+    configChosen = true;
+  }
+
+  /* ------------------------------------------------------------------ *
+   * Menus, chronicle, bookmarks, search
+   * ------------------------------------------------------------------ */
+  const menu = $('#mobile-menu');
+  const menuBtn = $('#menu-toggle');
+  function setMenu(open) {
+    menu.classList.toggle('is-open', open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menu.setAttribute('aria-hidden', String(!open));
+    $('#menu-icon').textContent = open ? 'close' : 'menu';
+  }
+  menu.setAttribute('aria-hidden', 'true');
+
+  function toggleChronicle() {
+    const panel = $('#daytona-chronicle');
+    const open = !panel.classList.contains('is-open');
+    panel.classList.toggle('is-open', open);
+    $('#chronicle-btn').setAttribute('aria-expanded', String(open));
+    $('#chronicle-icon').textContent = open ? 'expand_less' : 'expand_more';
+    if (open) setTimeout(() => {
+      const r = panel.getBoundingClientRect();
+      if (r.bottom > window.innerHeight - 90) smoothScrollTo(window.scrollY + (r.bottom - window.innerHeight) + 110, 500);
+    }, 350);
+  }
+
+  function toggleBookmark(btn) {
+    const on = btn.getAttribute('aria-pressed') !== 'true';
+    btn.setAttribute('aria-pressed', String(on));
+    $('.material-symbols-outlined', btn).classList.toggle('icon-fill', on);
+    btn.classList.toggle('text-secondary', on);
+    snack(on ? 'Saved to your references' : 'Removed from saved references');
+  }
+
+  const searchModal = $('#search-modal');
+  const searchInput = $('#search-input');
+  const searchList = $('#search-results');
+  function runSearchAction(item) {
+    closeOverlay(searchModal);
+    setTimeout(() => { if (item.type === 'watch') openWatchModal(item.key, document.querySelector('article[data-watch="' + item.key + '"] img')); else goTo(item.key); }, 250);
+  }
+  function renderSearch() {
+    const q = searchInput.value.trim().toLowerCase();
+    const items = q ? searchIndex.filter(i => q.split(/\s+/).every(w => i.words.includes(w))) : searchIndex.slice(0, 6);
+    searchList.innerHTML = '';
+    if (!items.length) {
+      const li = document.createElement('li');
+      li.className = 'px-3 py-4 text-center text-outline font-technical-mono text-[12px]';
+      li.textContent = 'No references found';
+      searchList.appendChild(li); return;
+    }
+    items.forEach(item => {
+      const li = document.createElement('li');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'w-full flex items-center gap-3 px-3 py-3 rounded-lg text-left hover:bg-surface-container-high transition-colors';
+      b.innerHTML = '<span class="material-symbols-outlined text-secondary text-[20px]"></span><span class="min-w-0 flex-1"><span class="block text-[14px] text-on-surface truncate"></span><span class="block font-technical-mono text-[10px] text-outline uppercase tracking-wider"></span></span>';
+      b.children[0].textContent = item.icon;
+      b.children[1].children[0].textContent = item.label;
+      b.children[1].children[1].textContent = item.hint;
+      b.addEventListener('click', () => runSearchAction(item));
+      li.appendChild(b); searchList.appendChild(li);
+    });
+    searchList._first = items[0];
+  }
+  searchInput.addEventListener('input', renderSearch);
+  searchInput.addEventListener('keydown', e => { if (e.key === 'Enter' && searchList._first) { e.preventDefault(); runSearchAction(searchList._first); } });
+
+  /* ------------------------------------------------------------------ *
+   * Delegated clicks (every button/link is wired here)
+   * ------------------------------------------------------------------ */
+  document.addEventListener('click', e => {
+    const t = e.target;
+
+    // [data-inquire] links (scroll to booking with a pre-selected watch)
+    const inq = t.closest('[data-inquire]');
+    if (inq) { e.preventDefault(); setMenu(false); reserveAndScroll(inq.dataset.inquire); return; }
+
+    const act = t.closest('[data-action]');
+    if (act) {
+      switch (act.dataset.action) {
+        case 'open-watch': {
+          e.preventDefault(); e.stopPropagation();
+          const holder = act.closest('article, figure');
+          openWatchModal(act.dataset.watch, holder ? holder.querySelector('img') : null);
+          return;
+        }
+        case 'close-overlay': closeOverlay(act.closest('.overlay')); return;
+        case 'reserve': {
+          const key = currentWatch;
+          closeOverlay(modal);
+          setTimeout(() => reserveAndScroll(key), 350);
+          return;
+        }
+        case 'toggle-menu': setMenu(!menu.classList.contains('is-open')); return;
+        case 'toggle-chronicle': toggleChronicle(); return;
+        case 'bookmark': e.stopPropagation(); toggleBookmark(act); return;
+        case 'search-open': searchInput.value = ''; renderSearch(); openOverlay(searchModal); return;
+        case 'cfg-dia': setDiameter(act); return;
+        case 'cfg-metal': setMetal(act); return;
+        case 'cfg-brc': setBracelet(act); return;
+        case 'cfg-inquire': {
+          e.preventDefault();
+          preselect('metiers');
+          configChosen = true;
+          reserveAndScroll('metiers');
+          snack('Configuration added: ' + cfgSummary());
+          return;
+        }
+        case 'info': {
+          const d = infoData[act.dataset.info];
+          if (d) showToast({ icon: d.icon, kicker: d.kicker, title: d.title, body: d.body });
+          return;
+        }
+        case 'city': {
+          if (selLocation.querySelector('option[value="' + act.dataset.city + '"]')) selLocation.value = act.dataset.city;
+          goTo('concierge');
+          snack(act.textContent.trim() + ' salon selected');
+          return;
+        }
+      }
+    }
+
+    // Whole card opens the dossier
+    const card = t.closest('article[data-watch]');
+    if (card && !t.closest('a, button')) { openWatchModal(card.dataset.watch, card.querySelector('img')); return; }
+
+    // In-page anchors → eased smooth scroll
+    const a = t.closest('a[href^="#"]');
+    if (a) {
+      const id = a.getAttribute('href').slice(1);
+      if (id === '' || document.getElementById(id)) {
+        e.preventDefault();
+        setMenu(false);
+        goTo(id || 'home');
+      }
+    }
+  });
+
+  window.addEventListener('resize', () => { if (window.innerWidth >= 1024) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('is-open')) setMenu(false); });
+
+  /* ------------------------------------------------------------------ *
+   * Scroll spy (active link / tab)
+   * ------------------------------------------------------------------ */
+  const spyIds = ['home', 'atelier-stats', 'collection', 'daytona-spotlight', 'metiers-dart', 'craftsmanship', 'configurator', 'legacy', 'concierge'];
+  const spyEls = spyIds.map(id => document.getElementById(id)).filter(Boolean);
+  const spyLinks = $$('[data-spy]');
+  let spyTick = false, currentId = '';
+
+  function updateSpy() {
+    spyTick = false;
+    const line = headerOffset() + window.innerHeight * 0.3;
+    let cur = spyEls[0].id;
+    spyEls.forEach(s => { if (s.getBoundingClientRect().top <= line) cur = s.id; });
+    if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4) cur = 'concierge';
+    if (cur === currentId) return;
+    currentId = cur;
+    spyLinks.forEach(l => {
+      const on = l.dataset.spy.split(' ').includes(cur);
+      l.classList.toggle('is-active', on);
+      if (on) l.setAttribute('aria-current', 'true'); else l.removeAttribute('aria-current');
+    });
+  }
+  window.addEventListener('scroll', () => { if (!spyTick) { spyTick = true; requestAnimationFrame(updateSpy); } }, { passive: true });
+  window.addEventListener('resize', updateSpy);
+  updateSpy();
+
+  /* ------------------------------------------------------------------ *
+   * Reveal on scroll
+   * ------------------------------------------------------------------ */
+  const revealEls = $$('[data-reveal]');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    const io = new IntersectionObserver(entries => {
+      entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('is-visible'); io.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+
+  /* Deep link (#section) on load */
+  window.addEventListener('load', () => {
+    const id = location.hash.slice(1);
+    if (id && document.getElementById(id)) setTimeout(() => goTo(id, { instant: true }), 60);
+  });
+})();
+
+</script>
+</body>
+</html>
